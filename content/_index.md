@@ -8,34 +8,15 @@ sections:
   - block: hero
     content:
       title: |
-        Wowchemy
-        Research Group
+        Adobe Media and Data Science Research (MDSR) 
+        Laboratory
       image:
         filename: welcome.jpg
       text: |
         <br>
         
-        The **Wowchemy Research Group** has been a center of excellence for Artificial Intelligence research, teaching, and practice since its founding in 2016.
-  
-  - block: collection
-    content:
-      title: Latest News
-      subtitle:
-      text:
-      count: 5
-      filters:
-        author: ''
-        category: ''
-        exclude_featured: false
-        publication_type: ''
-        tag: ''
-      offset: 0
-      order: desc
-      page_type: post
-    design:
-      view: card
-      columns: '1'
-  
+        The MDSR Lab is a group of researchers committed to solving hard problems in the broad area of digital media and marketing. The group develops cutting-edge machine learning approaches for important use cases including content understanding and generation, behavior modeling, and human-computer interaction.
+        
   - block: markdown
     content:
       title:
