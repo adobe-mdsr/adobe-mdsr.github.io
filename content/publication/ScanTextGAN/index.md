@@ -22,25 +22,26 @@ summary: ""
 
 tags:
 - Natural Language Processing
-- Psycho-linguistics
+- Psycholinguistics
 - Cognitive NLP
 - Generative Adversarial Network
+- Behavior-in-the-Wild
 
 featured: true
 
 
 links:
-url_pdf: "https://aclanthology.org/2023.eacl-main.139.pdf"
+url_pdf: "https://aclanthology.org/2023.eacl-main.139/"
 url_code: ""
 url_dataset: ""
 url_poster: ""
-url_project: "https://aclanthology.org/2023.eacl-main.139/"
+url_project: ""
 url_slides: ""
 url_source: ""
 url_video: "https://aclanthology.org/2023.eacl-main.139.mp4"
 
 image:
-  caption: "Generated scanpaths over text samples taken from various natural language processing (NLP) tasks. The green circles denote the important words characteristic of that task. The circles’ size denotes the fixation duration, and the arrows depict the saccadic movements. As can be seen, linguistically important words often have a higher fixation duration and revisit. Regressions (word revisits) also appear in the examples."
+  caption: "Generated scanpaths over text samples taken from various natural language processing (NLP) tasks. Linguistically important words often have a higher fixation duration and revisits."
   focal_point: "Smart"
   preview_only: false
   alt_text: "Generated scanpaths over text samples taken from various natural language processing (NLP) tasks."
