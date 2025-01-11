@@ -5,6 +5,16 @@ date: 2022-10-24
 type: landing
 
 sections:
+  - block: markdown
+    content:
+      title: We're hiring for research scientists and research associates!
+      text: Our team is looking to recruit predoctoral and postdoctoral researchers with backgrounds in natural language processing, computer vision, behavioral sciences, and machine learning.
+        {{% cta cta_link="https://careers.adobe.com/us/en/job/R151257/Research-Scientist" cta_text="Apply now →" %}}
+    design:
+      background:
+        color: '#190707'
+        text_color_light: true
+  
   - block: hero
     content:
       title: |
@@ -45,7 +55,7 @@ sections:
       filters:
         folders:
           - publication
-        publication_type: 'article'
+        publication_type: 'conference'
     design:
       view: citation
       columns: '1'
