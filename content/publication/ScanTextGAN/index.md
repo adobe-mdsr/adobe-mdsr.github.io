@@ -24,6 +24,9 @@ tags:
 - Natural Language Processing
 - Psycholinguistics
 - Cognitive NLP
+- Human Gaze Patterns
+- Scanpaths
+- Eyetracking
 - Generative Adversarial Network
 - Behavior-in-the-Wild
 
