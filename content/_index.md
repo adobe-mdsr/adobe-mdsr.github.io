@@ -57,7 +57,7 @@ sections:
           - publication
         publication_type: 'conference'
     design:
-      view: citation
+      view: citation-custom
       columns: '1'
 
   - block: markdown
