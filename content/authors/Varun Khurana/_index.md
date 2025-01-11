@@ -22,7 +22,7 @@ organizations:
     url: ''
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include Large Language and Vision Models, reasoning, planning and its intersection with human behavior.
+bio: 
 
 interests:
   - Natural Language Processing
