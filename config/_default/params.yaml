@@ -45,7 +45,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {2025} Adobe. All rights reserved.'
+    notice: '© 2025 Adobe. All rights reserved.'
     license:
       enable: false
       allow_derivatives: false
@@ -115,4 +115,4 @@ extensions:
 
 publications:
   date_format: January 2006
-  citation_style: apa
+  citation_style: mla
