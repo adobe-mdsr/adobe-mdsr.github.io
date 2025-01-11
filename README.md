@@ -19,8 +19,11 @@ This is the website for the Adobe Media and Data Science Research (MDSR) Laborat
 4. Add your profile picture to your folder with the name `avatar.jpg`.
 
 
+#### Adding your publications
 
-
+1. Add your publication to the `content/publication/` directory by creating a new folder with some short name for your publication.
+2. Add 'index.md' file to your folder and add the publication details in it. See the example in `content/publication/long-term-memorability/index.md`.
+3. Add 'featured.jpg' or 'featured.png' to your folder and add the publication picture to it.
 
 
 Credits: https://wowchemy.com/docs/getting-started/
