@@ -22,6 +22,9 @@ main:
 #  - name: Posts
 #    url: post
 #    weight: 60
+  - name: Collaborators
+    url: collaborators
+    weight: 65
 #  - name: Contact
 #    url: contact
 #    weight: 70
