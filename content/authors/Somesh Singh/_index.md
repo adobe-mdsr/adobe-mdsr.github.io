@@ -73,6 +73,8 @@ email: 'someshs@adobe.com'
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Researchers
+
+highlight_name: true
 ---
 
 I am Somesh, a research associate at Adobe and a PhD student in the Computer Science Department at the University at Buffalo and IIIT Delhi, advised by Prof. David Doermann and Dr. Rajiv Ratn Shah respectively. My work explores Large Language and Vision Models, reasoning, and planning through external and internal agents. My PhD is generously funded by Adobe.

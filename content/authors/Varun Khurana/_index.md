@@ -70,6 +70,8 @@ email: 'varunkhurana@adobe.com'
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Researchers
+
+highlight_name: true
 ---
 
 I am Varun, a research associate at Adobe's Media and Data Science Research lab. My research pursuits encompass Natural Language Processing, Computer Vision, Graph Learning and Cognitive AI. I have worked on harnessing the power of human behavior to enhance content intelligence. I successfully applied this pioneering concept by leveraging the cognitive signals contained in artificially generated human gaze patterns to improve both image and natural language understanding tasks. 
