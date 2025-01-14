@@ -43,4 +43,4 @@ We work closely with leading faculty and students from universities across the g
 
 <br><br>
 
-*Want to collaborate? [Contact us](mailto:yaman@adobe.com)* 
+*Want to collaborate? [Contact us](mailto:your-email@adobe.com)* 
