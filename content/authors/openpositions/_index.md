@@ -20,12 +20,6 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio:
 
-interests:
-  - Natural Language Processing
-  - Computer Vision
-  - Behavioral Sciences
-  - Machine Learning
-
 # Social/Academic Networking
 social:
 
