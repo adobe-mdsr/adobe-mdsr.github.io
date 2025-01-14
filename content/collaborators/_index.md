@@ -10,7 +10,7 @@ header:
 ---
 
 <div style="font-size: 0.85em; font-family: adobe-clean, sans-serif;">
-We work closely with leading faculty and students from universities across the globe. Our support for this global academic network includes opportunities such as student internships, faculty sabbaticals at our research centers, and unrestricted gift funding for faculty conducting research aligned with Adobe's areas of interest. Some of our academic collaborators include:
+We work closely with leading faculty and students from universities across the globe. Our support for this global academic network includes opportunities such as gift funding for faculty conducting research aligned with Adobe's areas of interest, PhD fellowships, student internships, and faculty sabbaticals at our research centers. Some of our academic collaborators include:
 </div>
 
 <br>
@@ -35,7 +35,3 @@ We work closely with leading faculty and students from universities across the g
     <a href="https://www.utexas.edu/">University of Texas at Austin</a>
   </div>
 </div>
-
-<br><br>
-
-*Want to collaborate? [Contact us](mailto:your-email@adobe.com)* 
