@@ -42,12 +42,6 @@ url_slides: ""
 url_source: ""
 url_video: "https://slideslive.com/39018722/cabinet-content-relevancebased-noise-reduction-for-table-question-answering?ref=account-138103-presentations"
 
-image:
-  caption: "Generated memorable ad for NYT 'Shining a Light on Women's Rights'"
-  focal_point: "Smart"
-  preview_only: false
-  alt_text: "Generated the detailed description of a 50 second memorable advertisement titled 'Shining a Light on Women's Rights—The Truth Has a Voice—The New York Times' for the brand The New York Times. Link to the original ad: https://www.youtube.com/watch?v=bPblzhUzTeg. Original memorability score: 65. Memorability score of Generated Ad: 91."
-
 projects: []
 slides: ""
 ---
