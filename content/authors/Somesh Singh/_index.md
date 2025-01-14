@@ -50,7 +50,7 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:someshs@adobe.com'
-  - icon: twitter
+  - icon: x-twitter
     icon_pack: fab
     link: https://x.com/someshsingh22
   - icon: google-scholar
