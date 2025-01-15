@@ -4,7 +4,7 @@ authors:
 - Ashmit Khandelwal
 - Aditya Agrawal
 - Aanisha Bhattacharyya
-- Yaman Kumar
+- Yaman Kumar Singla
 - Somesh Singh
 - Uttaran Bhattacharya
 - Ishita Dasgupta
@@ -13,10 +13,10 @@ authors:
 - Changyou Chen
 - Balaji Krishnamurthy
 
-date: "2025-01-01T00:00:00Z"
+date: "2024-01-01T00:00:00Z"
 doi: ""
 
-publishDate: "2023-12-01T00:00:00Z"
+publishDate: "2024-01-01T00:00:00Z"
 
 publication_types: ["conference"]
 
@@ -46,12 +46,12 @@ url_code: "https://behavior-in-the-wild.github.io/LCBM"
 url_dataset: "https://huggingface.co/datasets/behavior-in-the-wild/content-behavior-corpus"
 url_poster: ""
 url_project: "https://behavior-in-the-wild.github.io/LCBM"
-url_slides: ""
+url_slides: "https://iclr.cc/virtual/2024/poster/18547"
 url_source: ""
 url_video: "https://iclr.cc/virtual/2024/poster/18547"
 
 image:
-  caption: "Encoding and predicting content (images, videos, and text) and behavior in the language space. Large Content Behavior Models (LCBMs), once trained, can enable a host of different applications, including behavior simulation, content understanding, content-behavior optimization, and content-behavior understanding."
+  caption: "LCBM Capabilities"
   focal_point: "Smart"
   preview_only: false
   alt_text: "Encoding and predicting content (images, videos, and text) and behavior in the language space. Large Content Behavior Models (LCBMs), once trained, can enable a host of different applications, including behavior simulation, content understanding, content-behavior optimization, and content-behavior understanding."
