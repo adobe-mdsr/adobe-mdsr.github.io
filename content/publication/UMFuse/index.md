@@ -41,7 +41,7 @@ url_source: ""
 url_video: "https://www.youtube.com/watch?v=q8SS6zzSlr0"
 
 image:
-  caption: "UMFuse framework: (A) is the single view PHIG network on top of which the UMFuse framework operates. The source image and its keypoints along with the target keypoints are used to produce warped images and a visibility map (Iwv ,Iwi ,Vt). These are used to obtain the texture encoding at different scales l (et,l), and the source and target poses are used to obtain the pose encoding ep. Together they are used to render the output with a GAN-based renderer. (B) Shows the UMFuse adaptation for the single view network. The multiple source images and poses are passed individually to the warping and visibility prediction module to obtain multiple warped images and visibility maps, and from those, multiple texture-encoding vectors. Likewise, the source poses paired with the target pose are used to obtain multiple pose encoding vectors. These are merged in an affine combination using the predicted Appearance Retrieval Maps(s1-3). These maps are obtained using the Multi-view Fusion module and are a key contribution of the UMFuse framework."
+  caption: "Multi Image human reposing and mix and match virtual try on applications"
   focal_point: "UMFuse"
   preview_only: false
   alt_text: "Multi Image human reposing and mix and match virtual try on applications"
