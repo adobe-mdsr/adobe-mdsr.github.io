@@ -33,7 +33,7 @@ url_pdf: "https://openaccess.thecvf.com/content/CVPR2023/papers/Sarkar_Parameter
 url_code: ""
 url_dataset: ""
 url_poster: ""
-url_project: ""
+url_project: "https://mdsrlab.github.io/2023/03/16/FP-LIIF-CVPR.html"
 url_slides: ""
 url_source: ""
 url_video: ""

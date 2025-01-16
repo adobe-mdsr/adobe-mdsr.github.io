@@ -66,7 +66,7 @@ user_groups:
   - Researchers
 ---
 
-Hi, I’m Nikitha.
+Hi,
 I am a Research Associate at the Media and Data Science Research Lab, Adobe. My research focuses on tackling challenges in computer vision, particularly in Vision Language Models, Representation Learning, and Implicit Neural Representations. I am also interested in Systems Biology, with a focus on Metabolic Networks.
 
 Prior to joining Adobe, I earned a Bachelor’s degree in Biological Engineering and a Master’s degree in Data Science from the Indian Institute of Technology Madras. 
