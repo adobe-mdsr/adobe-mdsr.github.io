@@ -8,6 +8,10 @@ authors:
 - Changyou Chen
 - Roger Zimmermann
 
+date: "2021-5-3T00:00:00Z"
+doi: "10.1109/ICASSP39728.2021.9413998"
+
+publishDate: "2021-5-3T00:00:00Z"
 
 publication_types: ["conference"]
 
@@ -28,7 +32,7 @@ featured: false
 
 links:
 url_pdf: "https://arxiv.org/pdf/2010.16078"
-url_code: ""
+url_code: "https://github.com/midas-research/linguistically-informed-frame-interpolation"
 url_dataset: ""
 url_poster: ""
 url_project: ""

@@ -5,6 +5,11 @@ authors:
 - Apoorv Khattar
 - Ojaswa Sharma
 
+date: "2020-12-2T00:00:00Z"
+doi: "10.1109/WACV48630.2021.00289"
+
+publishDate: "2021-1-3T00:00:00Z"
+
 
 publication_types: ["conference"]
 
@@ -24,10 +29,10 @@ featured: false
 
 links:
 url_pdf: "http://openaccess.thecvf.com/content/WACV2021/papers/Mathur_2D_to_3D_Medical_Image_Colorization_WACV_2021_paper.pdf"
-url_code: ""
+url_code: "https://github.com/graphics-research-group/2D-To-3D-Medical-Image-Colorization"
 url_dataset: ""
 url_poster: ""
-url_project: ""
+url_project: "https://graphics.iiitd.edu.in/2020/11/20/volume-colorization/"
 url_slides: ""
 url_source: ""
 url_video: ""

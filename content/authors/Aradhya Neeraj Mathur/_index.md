@@ -8,7 +8,7 @@ last_name: Mathur
 
 # Username (this should match the folder name)
 authors:
-  - Aradhya
+  - Aradhya Neeraj Mathur
 
 # Is this the primary user of the site?
 superuser: false
