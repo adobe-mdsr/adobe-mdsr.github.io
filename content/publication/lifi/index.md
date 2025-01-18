@@ -8,10 +8,10 @@ authors:
 - Changyou Chen
 - Roger Zimmermann
 
-date: "2021-5-3T00:00:00Z"
+date: "2021-05-03T00:00:00Z"
 doi: "10.1109/ICASSP39728.2021.9413998"
 
-publishDate: "2021-5-3T00:00:00Z"
+publishDate: "2021-05-03T00:00:00Z"
 
 publication_types: ["conference"]
 
