@@ -5,10 +5,10 @@ authors:
 - Apoorv Khattar
 - Ojaswa Sharma
 
-date: "2020-12-2T00:00:00Z"
+date: "2020-12-12T00:00:00Z"
 doi: "10.1109/WACV48630.2021.00289"
 
-publishDate: "2021-1-3T00:00:00Z"
+publishDate: "2021-01-13T00:00:00Z"
 
 
 publication_types: ["conference"]
