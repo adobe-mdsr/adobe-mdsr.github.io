@@ -28,6 +28,16 @@ interests:
   - Deep Learning
   - Natural Language Processing
   - Behaviorial Science
+  - Multimodal Learning
+
+education:
+  courses:
+    - course: PhD in Computer Science
+      institution: State University of New York at Buffalo / IIIT Delhi
+      year:
+    - course: BTech in Computer Science
+      institution: IEM Kolkata
+      year: 2022
 
 #education:
 #  courses:
