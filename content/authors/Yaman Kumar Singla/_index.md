@@ -10,7 +10,7 @@ last_name: Kumar Singla
 superuser: true
 
 # Role/position
-role: Research Scientist
+role: Senior Research Scientist
 
 # Organizations/Affiliations
 organizations:
