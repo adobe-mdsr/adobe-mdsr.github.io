@@ -14,7 +14,8 @@ authors:
 superuser: false
 
 # Role/position
-role: Senior Machie Learning Scientist
+
+role: Senior Machine Learning Scientist
 
 # Organizations/Affiliations
 organizations:
