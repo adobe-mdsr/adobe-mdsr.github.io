@@ -43,7 +43,7 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:syarram@adobe.com'
-  - icon: twitter
+  - icon: x-twitter
     icon_pack: fab
     link: https://x.com/rt_sudhir
   - icon: google-scholar

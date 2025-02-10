@@ -10,7 +10,7 @@ last_name: Kumar Singla
 superuser: true
 
 # Role/position
-role: Research Scientist
+role: Senior Research Scientist
 
 # Organizations/Affiliations
 organizations:
@@ -40,7 +40,7 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:ykumar@adobe.com'
-  - icon: twitter
+  - icon: x-twitter
     icon_pack: fab
     link: https://twitter.com/YamanKSingla
   - icon: google-scholar

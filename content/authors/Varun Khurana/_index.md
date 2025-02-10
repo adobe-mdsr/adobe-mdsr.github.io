@@ -47,7 +47,7 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:varunkhurana@adobe.com'
-  - icon: twitter
+  - icon: x-twitter
     icon_pack: fab
     link: https://x.com/VarunKhurana07
   - icon: google-scholar
