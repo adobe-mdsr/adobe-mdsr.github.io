@@ -67,7 +67,6 @@ email: 'kbalaji@adobe.com'
 user_groups:
   - Researchers
 
-highlight_name: true
 ---
 
 Balaji works as a Senior Director in the Digital Experience Business, at Adobe India. He is a prolific inventor and researcher with more than 50 patents and an equal number of papers to his name. He started the Media and Data Science Research team with a small group of motivated engineers from different product teams with the vision to lead innovation from the India campus of Adobe, and to effect a significant change to the degree of use of intelligent features in Adobe DX products.

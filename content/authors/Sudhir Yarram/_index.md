@@ -66,7 +66,6 @@ email: 'syarram@adobe.com'
 user_groups:
   - Researchers
 
-highlight_name: true
 ---
 
 I am Sudhir, a machine learning research scientist at Adobe. I completed my PhD at the University at Buffalo under the supervision of Prof. Yuan Junsong. During my PhD, my research focused on designing video perception and forecasting models for autonomous systems, enabling them to perceive and forecast in the real world just as humans do, and ultimately surpass human forecasting abilities. My research spans two core directions: Video Perception, where I develop efficient and domain-adaptable models; and Future Forecasting, leveraging video perception to accurately predict future scenes. 
