@@ -1,7 +1,7 @@
 ---
 title: "Automatic Essay Scoring Systems are Both Overstable and Oversensitive: Explaining Why and Proposing Defenses"
 authors:
-- Yaman Kumar Singh
+- Yaman Kumar Singla
 - Swapnil Parekh
 - Somesh Singh
 - Junyi Jessy Li
