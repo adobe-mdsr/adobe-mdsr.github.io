@@ -68,7 +68,6 @@ highlight_name: false
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
   - Researchers
-
 ---
 
 I am Yaman Kumar Singla, a research scientist and lead in the Adobe Media and Data Science Research (MDSR) laboratory, where I study large language and vision models (LLMs, VLMs) in the context of advertising, marketing, and behavior modality. The behavior modality consists of the following components: (1) Speaker, (2) Content, (3) Channel, (4) Receiver, (5) Behavior (Effect). One can also include other components in these five: (6) Time of sending and (7) Time of receiving.
