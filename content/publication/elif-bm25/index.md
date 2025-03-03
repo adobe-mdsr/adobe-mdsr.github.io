@@ -13,8 +13,8 @@ publishDate: "2023-12-10T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "The 46th International ACM SIGIR Conference on Research and Development in Information Retrieval, (SIGIR) 2023"
-publication_short: "SIGIR 2023"
+publication: "SIGIR"
+publication_short: "SIGIR"
 
 abstract: "Neural retrieval models (NRMs) have been shown to outperform
 their statistical counterparts owing to their ability to capture semantic meaning via dense document representations. These models,

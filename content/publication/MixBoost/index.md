@@ -9,14 +9,14 @@ authors:
 - Piyush Gupta
 - Balaji Krishnamurthy
 
-date: "2023-01-01T00:00:00Z"
+date: "2020-01-01T00:00:00Z"
 doi: ""
 
-publishDate: "2023-01-01T00:00:00Z"
+publishDate: "2020-01-01T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "ICDM 2020"
+publication: "ICDM"
 publication_short: "ICDM"
 
 abstract: "Training a classification model on a dataset where the instances of one class outnumber those of the other class is a challenging problem. Such imbalanced datasets are standard in real-world situations such as fraud detection, medical diagnosis, and computational advertising. We propose an iterative data augmentation method, MixBoost, which intelligently selects (Boost) and then combines (Mix) instances from the majority and minority classes to generate synthetic hybrid instances that have characteristics of both classes. We evaluate MixBoost on 20 benchmark datasets, show that it outperforms existing approaches, and test its efficacy through significance testing. We also present ablation studies to analyze the impact of the different components of MixBoost."
@@ -24,7 +24,11 @@ abstract: "Training a classification model on a dataset where the instances of o
 summary: ""
 
 tags:
-- Source Themes
+- Instances
+- Mixboost
+- Datasets
+- Classes
+- Real-world
 featured: false
 
 links:
@@ -37,10 +41,6 @@ url_slides: ""
 url_source: ""
 url_video: ""
 
-image:
-  caption: "Image caption"
-  focal_point: ""
-  preview_only: false
 
 projects: []
 slides: ""

@@ -19,7 +19,7 @@ publishDate: "2023-01-01T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "ECIR’20"
+publication: "ECIR’"
 publication_short: "ECIR’20"
 
 abstract: "In this paper, we formulate keyphrase extraction from scholarly articles as a sequence labeling task solved using a BiLSTM-CRF, where the words in the input text are represented using deep contextualized embeddings. We evaluate the proposed architecture using both contextualized and fixed word embedding models on three different benchmark datasets, and compare with existing popular unsupervised and supervised techniques. Our results quantify the benefits of: (a) using contextualized embeddings over fixed word embeddings; (b) using a BiLSTM-CRF architecture with contextualized word embeddings over fine-tuning the contextualized embedding model directly; and (c) using domain-specific contextualized embeddings (SciBERT). Through error analysis, we also provide some insights into why particular models work better than the others. Lastly, we present a case study where we analyze different self-attention layers of the two best models (BERT and SciBERT) to better understand their predictions."
@@ -40,10 +40,6 @@ url_slides: ""
 url_source: ""
 url_video: ""
 
-image:
-  caption: "Image caption"
-  focal_point: ""
-  preview_only: false
 
 projects: []
 slides: ""

@@ -7,14 +7,14 @@ authors:
 - Anirudha Ramesh
 - Balaji Krishnamurthy
 
-date: "2023-01-01T00:00:00Z"
+date: "2021-01-01T00:00:00Z"
 doi: ""
 
-publishDate: "2023-01-01T00:00:00Z"
+publishDate: "2021-01-01T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "NeurIPS 2021"
+publication: "NeurIPS"
 publication_short: "NeurIPS"
 
 abstract: "One-shot image segmentation (OSS) methods enable semantic labeling of image
@@ -42,7 +42,10 @@ https://github.com/fewshotseg/toss."
 summary: ""
 
 tags:
-- Source Themes
+- One-shot
+- Image Segmentation
+- Semantic Labeling
+- Enable
 featured: false
 
 links:
@@ -55,10 +58,6 @@ url_slides: ""
 url_source: ""
 url_video: ""
 
-image:
-  caption: "Image caption"
-  focal_point: ""
-  preview_only: false
 
 projects: []
 slides: ""

@@ -15,7 +15,7 @@ doi: ""
 
 publishDate: "2023-01-01T00:00:00Z"
 
-publication_types: ["conference"]
+publication_types: ["journal"]
 
 publication: "formerly British Medical Journal"
 publication_short: "formerly"
@@ -52,10 +52,6 @@ url_slides: ""
 url_source: ""
 url_video: ""
 
-image:
-  caption: "Image caption"
-  focal_point: ""
-  preview_only: false
 
 projects: []
 slides: ""

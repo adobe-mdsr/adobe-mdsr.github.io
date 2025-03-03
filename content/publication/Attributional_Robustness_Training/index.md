@@ -8,14 +8,14 @@ authors:
 - Vineeth N Balasubramanian
 - Balaji Krishnamurthy
 
-date: "2023-01-01T00:00:00Z"
+date: "2020-01-01T00:00:00Z"
 doi: ""
 
-publishDate: "2023-01-01T00:00:00Z"
+publishDate: "2020-01-01T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "ECCV 2020"
+publication: "ECCV"
 publication_short: "ECCV"
 
 abstract: "Interpretability is an emerging area of research in trustworthy machine learning. Safe deployment of machine learning system mandates that the prediction and its explanation be reliable and robust. Recently, it has been shown that the explanations could be manipulated easily by adding visually imperceptible perturbations to the input while keeping the model's prediction intact. In this work, we study the problem of attributional robustness (i.e. models having robust explanations) by showing an upper bound for attributional vulnerability in terms of spatial correlation between the input image and its explanation map. We propose a training methodology that learns robust features by minimizing this upper bound using soft-margin triplet loss. Our methodology of robust attribution training (\textit{ART}) achieves the new state-of-the-art attributional robustness measure by a margin of ≈ 6-18 % on several standard datasets, ie. SVHN, CIFAR-10 and GTSRB. We further show the utility of the proposed robust training technique (\textit{ART}) in the downstream task of weakly supervised object localization by achieving the new state-of-the-art performance on CUB-200 dataset."
@@ -23,7 +23,10 @@ abstract: "Interpretability is an emerging area of research in trustworthy machi
 summary: ""
 
 tags:
-- Source Themes
+- Robust
+- Machine Learning
+- Attributional
+- State-of-the-art
 featured: false
 
 links:
@@ -36,10 +39,6 @@ url_slides: ""
 url_source: ""
 url_video: ""
 
-image:
-  caption: "Image caption"
-  focal_point: ""
-  preview_only: false
 
 projects: []
 slides: ""

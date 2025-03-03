@@ -15,7 +15,7 @@ publishDate: "2023-01-01T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "AAAI’19"
+publication: "AAAI’"
 publication_short: "AAAI’19"
 
 abstract: ""
@@ -36,10 +36,6 @@ url_slides: ""
 url_source: ""
 url_video: ""
 
-image:
-  caption: "Image caption"
-  focal_point: ""
-  preview_only: false
 
 projects: []
 slides: ""

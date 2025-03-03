@@ -6,14 +6,14 @@ authors:
 - Mausoom Sarkar
 - Balaji Krishnamurthy
 
-date: "2023-01-01T00:00:00Z"
+date: "2020-01-01T00:00:00Z"
 doi: ""
 
-publishDate: "2023-01-01T00:00:00Z"
+publishDate: "2020-01-01T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "EMNLP 2020"
+publication: "EMNLP"
 publication_short: "EMNLP"
 
 abstract: "Document structure extraction has been a widely researched area for decades with recent works performing it as a semantic segmentation task over document images using fully-convolution networks. Such methods are limited by image resolution due to which they fail to disambiguate structures in dense regions which appear commonly in forms. To mitigate this, we propose Form2Seq, a novel sequence-to-sequence (Seq2Seq) inspired framework for structure extraction using text, with a specific focus on forms, which leverages relative spatial arrangement of structures. We discuss two tasks; 1) Classification of low-level constituent elements (TextBlock and empty fillable Widget) into ten types such as field captions, list items, and others; 2) Grouping lower-level elements into higher-order constructs, such as Text Fields, ChoiceFields and ChoiceGroups, used as information collection mechanism in forms. To achieve this, we arrange the constituent elements linearly in natural reading order, feed their spatial and textual representations to Seq2Seq framework, which sequentially outputs prediction of each element depending on the final task. We modify Seq2Seq for grouping task and discuss improvements obtained through cascaded end-to-end training of two tasks versus training in isolation. Experimental results show the effectiveness of our text-based approach achieving an accuracy of 90% on classification task and an F1 of 75.82, 86.01, 61.63 on groups discussed above respectively, outperforming segmentation baselines. Further we show our framework achieves state of the results for table structure recognition on ICDAR 2013 dataset."
@@ -21,7 +21,11 @@ abstract: "Document structure extraction has been a widely researched area for d
 summary: ""
 
 tags:
-- Source Themes
+- Structure
+- Framework
+- Elements
+- Semantic Segmentation
+- Extraction
 featured: false
 
 links:
@@ -34,10 +38,6 @@ url_slides: ""
 url_source: ""
 url_video: ""
 
-image:
-  caption: "Image caption"
-  focal_point: ""
-  preview_only: false
 
 projects: []
 slides: ""

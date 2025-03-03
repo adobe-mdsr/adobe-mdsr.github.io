@@ -10,14 +10,14 @@ authors:
 - Thomas C. Kingsley
 - Ramesh Raskar
 
-date: "2023-01-01T00:00:00Z"
+date: "2021-01-01T00:00:00Z"
 doi: ""
 
-publishDate: "2023-01-01T00:00:00Z"
+publishDate: "2021-01-01T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "Winter Simulation Conference 2021"
+publication: "Winter Simulation Conference"
 publication_short: "Winter"
 
 abstract: "We introduce DeepABM, a computational framework for agent-based modeling that leverages geometric message passing for simulating action and interactions over large agent populations. Using DeepABM allows scaling simulations to large agent populations in real-time and running them efficiently on GPU architectures. Using the DeepABM framework, we build DeepABM-COVID simulator to provide support for various non-pharmaceutical interventions (quarantine, exposure notification, vaccination, testing) for the COVID-19 pandemic, and can scale to populations of representative size in real-time on a GPU. DeepABM-COVID can model 200 million interactions (over 100,000 agents across 180 time-steps) in 90 seconds, and is made available online to help researchers with modeling and analysis of various interventions. We explain various components of the framework and discuss results from one research study to evaluate the impact of delaying the second dose of the COVID-19 vaccine in collaboration with clinical and public health experts."
@@ -25,7 +25,11 @@ abstract: "We introduce DeepABM, a computational framework for agent-based model
 summary: ""
 
 tags:
-- Source Themes
+- Deepabm
+- Framework
+- Populations
+- Various
+- Real-time
 featured: false
 
 links:
@@ -38,10 +42,6 @@ url_slides: ""
 url_source: ""
 url_video: ""
 
-image:
-  caption: "Image caption"
-  focal_point: ""
-  preview_only: false
 
 projects: []
 slides: ""
