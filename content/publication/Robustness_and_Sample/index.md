@@ -24,7 +24,7 @@ tags:
 featured: false
 
 links:
-url_pdf: "https://link.springer.com/epdf/10.1007/s13235-023-00490-2?sharing_token=XDkZWlsCzvfYxKVjasbwBve4RwlQNchNByi7wbcMAY7elic9Cjgf5p3ehrpwMnC9OkDobzZyUXG32lBfGf4DGkuZRtRDHYrqX301a5ObJo_CIpJ6lclbAyJ-d4mTjRNnsofm2tB3birZb-adNEj_I6pfzJxqNbgXGypkrsXwFNQ%3D"
+url_pdf: "https://link.springer.com/epdf/10.1007/s13235-023-00490-2"
 url_code: ""
 url_dataset: ""
 url_poster: ""
