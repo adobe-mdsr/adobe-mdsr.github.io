@@ -21,14 +21,15 @@ publication_short: "WACV"
 
 abstract: "Modern Text-to-Image (T2I) Diffusion models have revolutionized image editing by enabling the generation of high-quality photorealistic images. While the de facto method for performing edits with T2I models is through text instructions, this approach non-trivial due to the complex many-to-many mapping between natural language and images. In this work, we address exemplar-based image editing -- the task of transferring an edit from an exemplar pair to a content image(s). We propose ReEdit, a modular and efficient end-to-end framework that captures edits in both text and image modalities while ensuring the fidelity of the edited image. We validate the effectiveness of ReEdit through extensive comparisons with state-of-the-art baselines and sensitivity analyses of key design choices. Our results demonstrate that ReEdit consistently outperforms contemporary approaches both qualitatively and quantitatively. Additionally, ReEdit boasts high practical applicability, as it does not require any task-specific optimization and is four times faster than the next best baseline."
 
+tags: ["Text-to-image", "Diffusion models", "Image editing", "Exemplar-based", "Reedit"]
 summary: ""
 
 tags:
-- Reedit
-- Models
-- Editing
-- Images
-- Through
+- Text-to-image
+- Diffusion models
+- Image editing
+- Modular framework
+- Exemplar-based
 featured: false
 
 links:
@@ -45,3 +46,4 @@ url_video: ""
 projects: []
 slides: ""
 ---
+

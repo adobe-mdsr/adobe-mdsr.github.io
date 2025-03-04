@@ -8,15 +8,15 @@ authors:
 - Yifang Yin
 - Roger Zimmerman
 
-date: "2023-01-01T00:00:00Z"
+date: "2019-01-01T00:00:00Z"
 doi: ""
 
-publishDate: "2023-01-01T00:00:00Z"
+publishDate: "2019-01-01T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "AAAI’"
-publication_short: "AAAI’19"
+publication: "AAAI"
+publication_short: "AAAI"
 
 abstract: ""
 
@@ -27,7 +27,7 @@ tags:
 featured: false
 
 links:
-url_pdf: ""
+url_pdf: "https://arxiv.org/abs/1907.01367"
 url_code: ""
 url_dataset: ""
 url_poster: ""

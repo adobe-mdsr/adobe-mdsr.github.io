@@ -19,14 +19,15 @@ publication_short: "NAACL"
 
 abstract: "Large transformer-based pre-trained language models have achieved impressive performance on a variety of knowledge-intensive tasks and can capture factual knowledge in their parameters. We argue that storing large amounts of knowledge in the model parameters is sub-optimal given the ever-growing amounts of knowledge and resource requirements. We posit that a more efficient alternative is to provide explicit access to contextually relevant structured knowledge to the model and train it to use that knowledge. We present LM-CORE – a general framework to achieve this– that allows decoupling of the language model training from the external knowledge source and allows the latter to be updated without affecting the already trained model. Experimental results show that LM-CORE, having access to external knowledge, achieves significant and robust outperformance over state-of-the-art knowledge-enhanced language models on knowledge probing tasks; can effectively handle knowledge updates; and performs well on two downstream tasks. We also present a thorough error analysis highlighting the successes and failures of LM-CORE. Our code and model checkpoints are publicly available."
 
+tags: ["Transformer", "Language models", "Knowledge management", "Lm-core", "Error analysis"]
 summary: ""
 
 tags:
+- Transformers
 - Knowledge
-- Language
+- Language models
 - Lm-core
-- Language Models
-- Parameters
+- External knowledge
 featured: false
 
 links:

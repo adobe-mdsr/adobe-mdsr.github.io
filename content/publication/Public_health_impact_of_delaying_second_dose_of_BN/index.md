@@ -18,7 +18,7 @@ publishDate: "2023-01-01T00:00:00Z"
 publication_types: ["journal"]
 
 publication: "formerly British Medical Journal"
-publication_short: "formerly"
+publication_short: "British Medical Journal"
 
 abstract: "Objective To estimate population health outcomes with delayed second dose versus standard schedule of SARS-CoV-2 mRNA vaccination.
 
@@ -36,10 +36,15 @@ Results Over all simulation replications, the median cumulative mortality per 10
 
 Conclusions A delayed second dose vaccination strategy, at least for people aged under 65, could result in reduced cumulative mortality under certain conditions."
 
+tags: ["Sars-cov-2", "Vaccination", "Health outcomes", "Mrna", "Epidemiology"]
 summary: ""
 
 tags:
-- Source Themes
+- Covid-19
+- Vaccination
+- Public health
+- Mrna
+- Epidemiology
 featured: false
 
 links:
@@ -56,3 +61,4 @@ url_video: ""
 projects: []
 slides: ""
 ---
+

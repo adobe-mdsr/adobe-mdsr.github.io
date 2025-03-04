@@ -21,14 +21,15 @@ publication_short: "ICDM"
 
 abstract: "Training a classification model on a dataset where the instances of one class outnumber those of the other class is a challenging problem. Such imbalanced datasets are standard in real-world situations such as fraud detection, medical diagnosis, and computational advertising. We propose an iterative data augmentation method, MixBoost, which intelligently selects (Boost) and then combines (Mix) instances from the majority and minority classes to generate synthetic hybrid instances that have characteristics of both classes. We evaluate MixBoost on 20 benchmark datasets, show that it outperforms existing approaches, and test its efficacy through significance testing. We also present ablation studies to analyze the impact of the different components of MixBoost."
 
+tags: ["Class imbalance", "Data augmentation", "Synthetic instances", "Benchmark datasets", "Machine learning"]
 summary: ""
 
 tags:
-- Instances
-- Mixboost
-- Datasets
-- Classes
-- Real-world
+- Classification
+- Imbalanced data
+- Data augmentation
+- Fraud detection
+- Machine learning
 featured: false
 
 links:
@@ -45,3 +46,4 @@ url_video: ""
 projects: []
 slides: ""
 ---
+

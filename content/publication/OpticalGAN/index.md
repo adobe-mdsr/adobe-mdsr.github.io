@@ -19,14 +19,15 @@ publication_short: "QTML"
 
 abstract: "We present OpticalGAN, an extension of quantum generative adversarial networks for continuous-variable quantum computation. OpticalGAN consists of photonic variational circuits comprising of optical Gaussian and Kerr gates. Photonic quantum computation is a realization of continuous variable quantum computing which involves encoding and processing information in the continuous quadrature amplitudes of quantized electromagnetic field such as light. Information processing in photonic quantum computers is performed using optical gates on squeezed light. Both the generator and discriminator of OpticalGAN are short depth variational circuits composed of gaussian and non-gaussian gates. We demonstrate our approach by using OpticalGAN to generate energy eigenstates and coherent states."
 
+tags: ["Quantumcomputing", "Opticalgan", "Variationalcircuits", "Photonicgates", "Energyeigenstates"]
 summary: ""
 
 tags:
-- Quantum
 - Opticalgan
-- Computation
-- Photonic
-- Variational
+- Quantumcomputing
+- Variationalcircuits
+- Photonicgates
+- Energyeigenstates
 featured: false
 
 links:
@@ -43,3 +44,4 @@ url_video: ""
 projects: []
 slides: ""
 ---
+

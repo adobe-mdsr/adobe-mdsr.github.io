@@ -39,13 +39,15 @@ and introduce nuances and uniformity in reporting results for the OSS problem.
 The evaluation splits of the TOSS dataset and instructions for use are available at
 https://github.com/fewshotseg/toss."
 
+tags: ["Image segmentation", "One-shot learning", "Semantic labeling", "Computer vision", "Machine learning"]
 summary: ""
 
 tags:
+- Image segmentation
 - One-shot
-- Image Segmentation
-- Semantic Labeling
-- Enable
+- Semantic labeling
+- Computer vision
+- Machine learning
 featured: false
 
 links:

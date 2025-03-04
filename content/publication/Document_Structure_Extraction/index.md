@@ -19,14 +19,15 @@ publication_short: "ECCV"
 
 abstract: "Structure extraction from document images has been a long-standing research topic due to its high impact on a wide range of practical applications. In this paper, we share our findings on employing a hierarchical semantic segmentation network for this task of structure extraction. We propose a prior based deep hierarchical CNN network architecture that enables document structure extraction using very high resolution(1800 x 1000) images. We divide the document image into overlapping horizontal strips such that the network segments a strip and uses its prediction mask as prior for predicting the segmentation of the subsequent strip. We perform experiments establishing the effectiveness of our strip based network architecture through ablation methods and comparison with low-resolution variations. Further, to demonstrate our network's capabilities, we train it on only one type of documents (Forms) and achieve state-of-the-art results over other general document datasets. We introduce our new human-annotated forms dataset and show that our method significantly outperforms different segmentation baselines on this dataset in extracting hierarchical structures. Our method is currently being used in Adobe's AEM Forms for automated conversion of paper and PDF forms to modern HTML based forms."
 
+tags: ["Structure extraction", "Semantic segmentation", "Deep learning", "Document images", "Cnn architecture"]
 summary: ""
 
 tags:
-- Network
-- Document
-- Extraction
-- Hierarchical
-- Segmentation
+- Structure extraction
+- Document images
+- Semantic segmentation
+- Deep learning
+- Hierarchical cnn
 featured: false
 
 links:
