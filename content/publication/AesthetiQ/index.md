@@ -1,5 +1,5 @@
 ---
-title: "UMFuse: Unified Multi View Fusion for Human Editing applications"
+title: "AesthetiQ: Enhancing Graphic Layout Design via Aesthetic-Aware Preference Alignment"
 authors:
 - Sohan patnaik
 - Rishabh Jain
