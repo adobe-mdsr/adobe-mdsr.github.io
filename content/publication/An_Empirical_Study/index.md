@@ -1,17 +1,11 @@
 ---
----
 title: " An Empirical Study of Representation Learning for Reinforcement Learning in Healthcare"
 authors:
-- Killian
-- T.
-- Zhang
-- H.
-- Subramanian
-- J.
-- Fatemi
-- M.
-- Ghassemi
-- M.
+- Killian T.
+- Zhang H.
+- Subramanian J.
+- Fatemi M.
+- Ghassemi M.
 
 date: "2020-01-01T00:00:00Z"
 doi: ""
@@ -25,15 +19,12 @@ publication_short: "PMLR"
 
 abstract: "Reinforcement Learning (RL) has recently been applied to sequential estimation and prediction problems identifying and developing hypothetical treatment strategies for septic patients, with a particular focus on offline learning with observational data. In practice, successful RL relies on informative latent states derived from sequential observations to develop optimal treatment strategies. To date, how best to construct such states in a healthcare setting is an open question. In this paper, we perform an empirical study of several information encoding architectures using data from septic patients in the MIMIC-III dataset to form representations of a patient state. We evaluate the impact of representation dimension, correlations with established acuity scores, and the treatment policies derived from them. We find that sequentially formed state representations facilitate effective policy learning in batch settings, validating a more thoughtful approach to representation learning that remains faithful to the sequential and partial nature of healthcare data."
 
-tags: ["Reinforcement learning", "Healthcare", "Sequential estimation", "Representation learning", "Mimic-iii"]
 summary: ""
 
 tags:
-- Reinforcementlearning
-- Healthcare
-- Representationlearning
-- Septicpatients
-- Mimic-iii
+- Sequential
+- Reinforcement Learning
+- Strategies
 featured: false
 
 links:
@@ -49,8 +40,4 @@ url_video: ""
 
 projects: []
 slides: ""
----
-
----
-
 ---
