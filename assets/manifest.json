@@ -1,0 +1,14 @@
+{
+  "name": "Adobe Media and Data Science Research (MDSR) Laboratory",
+  "short_name": "MDSR Lab",
+  "icons": [
+    {
+      "src": "/media/icon.png",
+      "sizes": "1004x889",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+} 
