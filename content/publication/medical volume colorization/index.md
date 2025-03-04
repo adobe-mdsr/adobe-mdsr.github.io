@@ -5,16 +5,16 @@ authors:
 - Apoorv Khattar
 - Ojaswa Sharma
 
-date: "2020-12-12T00:00:00Z"
+date: "2021-01-01T00:00:00Z"
 doi: "10.1109/WACV48630.2021.00289"
 
-publishDate: "2021-01-13T00:00:00Z"
+publishDate: "2021-01-01T00:00:00Z"
 
 
 publication_types: ["conference"]
 
-publication: "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision 2021"
-publication_short: "WACV 2021"
+publication: "WACV"
+publication_short: "WACV"
 
 abstract: "Colorization involves the synthesis of colors while preserving structural content as well as the semantics of the target image. This is a well-explored problem in 2D with many state-of-the-art solutions. We explore a new challenge in the field of colorization where we aim at colorizing multi-modal 3D medical data using style exemplars. To the best of our knowledge, this work is the first of its kind so we discuss the full pipeline in detail and the challenges that it brings for 3D medical data. The colorization of medical MRI volume also entails modality conversion that highlights the robustness of our approach in handling multi-modal data."
 summary: ""
