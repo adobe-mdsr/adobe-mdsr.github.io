@@ -3,8 +3,9 @@ title: "AesthetiQ: Enhancing Graphic Layout Design via Aesthetic-Aware Preferenc
 authors:
 - Sohan patnaik
 - Rishabh Jain
-- Mausoom Sarkar
 - Balaji Krishnamurthy
+- Mausoom Sarkar
+
 
 date: "2025-03-01T00:00:00Z"
 # doi: "10.18653/v1/2023.eacl-main.139"
