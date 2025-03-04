@@ -7,7 +7,7 @@ authors:
 - Atharva Chandak
 - Harsh Mahajan
 - Varun Khurana
-- Yaman K Singla
+- Yaman Kumar Singla
 
 date: "2025-01-01T00:00:00Z"
 doi: ""

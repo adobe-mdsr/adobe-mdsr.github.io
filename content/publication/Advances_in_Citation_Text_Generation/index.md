@@ -7,7 +7,7 @@ authors:
 - Vrinda Narayan
 - Naman Lal
 - Debanjan Mahata
-- Yaman K Singla
+- Yaman Kumar Singla
 - Rajiv Shah
 
 date: "2024-01-01T00:00:00Z"

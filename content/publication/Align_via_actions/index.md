@@ -3,7 +3,7 @@ title: "Align via actions: Learning behavior aligns LLMs with human opinions in 
 authors:
 - Aanisha Bhattacharyya
 - Susmit Aggarwal
-- Yaman K Singla
+- Yaman Kumar Singla
 - Tarun Menta
 - Nikitha SR
 - Balaji Krishnamurthy
