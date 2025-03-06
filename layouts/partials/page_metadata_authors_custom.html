@@ -1,0 +1,23 @@
+{{/* Display author list. */}}
+
+{{ $taxonomy := "authors" }}
+{{ with .Param $taxonomy }}
+  {{ $link_authors := site.Params.link_authors | default true }}
+  {{ range $index, $value := . }}
+    {{- $profile_page := site.GetPage (printf "/%s/%s" $taxonomy (. | urlize)) -}}
+    {{- $is_people_author := false -}}
+    {{- if $profile_page -}}
+      {{- if in $profile_page.Params.user_groups "Researchers" -}}
+        {{- $is_people_author = true -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- if gt $index 0 }}, {{ end -}}
+    
+    {{- if and $profile_page $is_people_author -}}
+      <a href="{{$profile_page.RelPermalink}}">{{$profile_page.Title}}</a>
+    {{- else -}}
+      {{- . -}}
+    {{- end -}}
+  {{ end }}
+{{ end }} 
