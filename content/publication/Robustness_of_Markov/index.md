@@ -17,7 +17,7 @@ publication_short: "Indian Control Conference"
 
 abstract: "Dynamic games (also called stochastic games or Markov games) are an important class of games for modeling multi-agent interactions. In many situations, the dynamics and reward functions of the game are learnt from past data and are therefore approximate. In this paper, we study the robustness of Markov perfect equilibrium to approximations in reward and transition functions. Using approximation results from Markov decision processes, we show that the Markov perfect equilibrium of an approximate (or perturbed) game is always an approximate Markov perfect equilibrium of the original game. We provide explicit bounds on the approximation error in terms of three quantities: (i) the error in approximating the reward functions, (ii) the error in approximating the transition function, and (iii) a property of the value function of the MPE of the approximate game. The second and third quantities depend on the choice of metric on probability spaces. We also present coarser upper bounds which do not depend on the value function but only depend on the properties of the reward and transition functions of the approximate game. We illustrate the results via a numerical example."
 
-tags: ["Dynamicgames", "Markovequilibrium", "Approximationerror", "Multiagentsystems", "Stochasticprocesses"]
+tags: ["Dynamic games", "Markov equilibrium", "Approximation error", "Multi agent systems", "Stochastic processes"]
 summary: ""
 
 tags:
