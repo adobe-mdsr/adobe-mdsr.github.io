@@ -10,10 +10,17 @@
 
 // Custom styles for the Adobe logo in the hero section
 .wg-hero .hero-media img {
-  max-width: 300px !important;  // Set a fixed maximum width
-  width: 300px !important;      // Force the width
+  max-width: 300px !important;  // Maximum width for large screens
+  width: 100% !important;       // Make image responsive
   height: auto !important;      // Maintain aspect ratio
   margin: 0 auto;              // Center the image
+}
+
+// Make logo smaller on mobile screens
+@media screen and (max-width: 768px) {
+  .wg-hero .hero-media img {
+    max-width: 25% !important;  // Use percentage for mobile screens
+  }
 }
 
 // Custom styles for navbar title on mobile

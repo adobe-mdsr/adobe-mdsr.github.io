@@ -22,15 +22,14 @@ publication_short: "Winter Simulation Conference"
 
 abstract: "We introduce DeepABM, a computational framework for agent-based modeling that leverages geometric message passing for simulating action and interactions over large agent populations. Using DeepABM allows scaling simulations to large agent populations in real-time and running them efficiently on GPU architectures. Using the DeepABM framework, we build DeepABM-COVID simulator to provide support for various non-pharmaceutical interventions (quarantine, exposure notification, vaccination, testing) for the COVID-19 pandemic, and can scale to populations of representative size in real-time on a GPU. DeepABM-COVID can model 200 million interactions (over 100,000 agents across 180 time-steps) in 90 seconds, and is made available online to help researchers with modeling and analysis of various interventions. We explain various components of the framework and discuss results from one research study to evaluate the impact of delaying the second dose of the COVID-19 vaccine in collaboration with clinical and public health experts."
 
-tags: ["Agent-based", "Modeling", "Covid-19", "Gpu", "Interventions"]
 summary: ""
 
 tags:
-- Agent-based
-- Modeling
-- Covid-19
-- Gpu
-- Interventions
+- Agent based modeling
+- Graph networks
+- Covid 19
+- Gpu computing
+- Policy interventions
 featured: false
 
 links:

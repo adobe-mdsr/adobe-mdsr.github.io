@@ -19,15 +19,15 @@ publication_short: "InterSpeech"
 
 abstract: "Existing approaches in disfluency detection focus on solving a token-level classification task for identifying and removing disfluencies in text. Moreover, most works focus on leveraging only contextual information captured by the linear sequences in text, thus ignoring the structured information in text which is efficiently captured by dependency trees. In this paper, building on the span classification paradigm of entity recognition, we propose a novel architecture for detecting disfluencies in transcripts from spoken utterances, incorporating both contextual information through transformers and long-distance structured information captured by dependency trees, through graph convolutional networks (GCNs). Experimental results show that our proposed model achieves state-of-the-art results on the widely used English Switchboard for disfluency detection and outperforms prior-art by a significant margin. We make all our codes publicly available on GitHub (this https URL)"
 
-tags: ["Disfluency", "Transcripts", "Dependency trees", "Graph convolutional networks", "Transformers"]
-summary: ""
-
 tags:
 - Disfluency
+- Transcripts
 - Dependency trees
-- Contextual information
-- Transformers
 - Graph convolutional networks
+- Transformers
+
+summary: ""
+
 featured: false
 
 links:

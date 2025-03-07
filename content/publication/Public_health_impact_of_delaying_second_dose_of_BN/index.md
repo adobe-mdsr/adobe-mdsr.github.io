@@ -36,14 +36,11 @@ Results Over all simulation replications, the median cumulative mortality per 10
 
 Conclusions A delayed second dose vaccination strategy, at least for people aged under 65, could result in reduced cumulative mortality under certain conditions."
 
-tags: ["Sars-cov-2", "Vaccination", "Health outcomes", "Mrna", "Epidemiology"]
-summary: ""
-
 tags:
-- Covid-19
+- Sars cov 2
 - Vaccination
-- Public health
-- Mrna
+- Health outcomes
+- Mrna vaccines
 - Epidemiology
 featured: false
 
