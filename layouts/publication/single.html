@@ -58,16 +58,16 @@
     {{ end }}
   </div>
 
-
+  {{ $files := readDir (printf "content/%s" .File.Dir) }}
+  {{ $featuredImage := "" }}
+  {{ range $files }}
+    {{ if or (eq .Name "featured.jpg") (eq .Name "featured.png") }}
+      {{ $featuredImage = .Name }}
+    {{ end }}
+  {{ end }}
+  {{ if $featuredImage }}
   <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width:720px;max-height:439px">
     <div style="position:relative">
-      {{ $files := readDir (printf "content/%s" .File.Dir) }}
-      {{ $featuredImage := "" }}
-      {{ range $files }}
-        {{ if or (eq .Name "featured.jpg") (eq .Name "featured.png") }}
-          {{ $featuredImage = .Name }}
-        {{ end }}
-      {{ end }}
       <img src="{{ printf "%s%s" .RelPermalink $featuredImage }}" 
            width="720" 
            height="439" 
@@ -75,7 +75,7 @@
            class="featured-image">
     </div>
   </div>
-
+  {{ end }}
 
   <div class="article-container">
 
