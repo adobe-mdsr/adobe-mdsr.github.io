@@ -14,10 +14,11 @@
 
     {{- if gt $index 0 }}, {{ end -}}
     
+    {{/* Only make MDSR authors (those in the Researchers group) clickable */}}
     {{- if and $profile_page $is_people_author -}}
       <a href="{{$profile_page.RelPermalink}}">{{$profile_page.Title}}</a>
     {{- else -}}
       {{- . -}}
     {{- end -}}
-  {{ end }}
+  {{ end }},
 {{ end }} 
