@@ -64,11 +64,11 @@
       {{ $files := readDir (printf "content/%s" .File.Dir) }}
       {{ $featuredImage := "" }}
       {{ range $files }}
-        {{ if findRE "^featured_.*\\.webp$" .Name }}
+        {{ if or (eq .Name "featured.jpg") (eq .Name "featured.png") }}
           {{ $featuredImage = .Name }}
         {{ end }}
       {{ end }}
-      <img src="{{ printf "%s%sfeatured.png" .RelPermalink $featuredImage }}" 
+      <img src="{{ printf "%s%s" .RelPermalink $featuredImage }}" 
            width="720" 
            height="439" 
            alt="{{ .Title }}" 
