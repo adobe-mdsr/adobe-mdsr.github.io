@@ -1,0 +1,70 @@
+{{- define "main" -}}
+
+<div class="pub">
+
+  {{ partial "page_header.html" . }}
+
+  <div class="article-container pt-3">
+    <h1>{{ .Title }}</h1>
+    
+    <div class="article-metadata d-flex flex-wrap align-items-center">
+      {{/* Display authors if they exist */}}
+      {{ if .Params.authors }}
+      <div class="d-inline-flex mr-2">
+        {{ $authorLen := len .Params.authors }}
+        {{ range $k, $v := .Params.authors }}
+          {{ $authorPage := site.GetPage (printf "/authors/%s" (urlize $v)) }}
+          {{ $is_people_author := false }}
+          {{ if $authorPage }}
+            {{ if in $authorPage.Params.user_groups "Researchers" }}
+              {{ $is_people_author = true }}
+            {{ end }}
+          {{ end }}
+          {{ if and $authorPage $is_people_author }}
+            <span><a href="{{ $authorPage.RelPermalink }}">{{ $v }}</a></span>{{ if lt $k (sub $authorLen 1) }}, {{ end }}
+          {{ else }}
+            <span>{{ $v }}</span>{{ if lt $k (sub $authorLen 1) }}, {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+      {{end}}
+
+      {{/* Show date */}}
+      {{ if and .Params.authors .Date }}<span class="middot-divider d-inline-flex"></span>{{ end }}
+      {{ if .Date }}
+      <span class="article-date d-inline-flex align-items-center">
+        <i class="far fa-calendar-alt mr-1"></i>
+        {{ .Date.Format "January 2, 2006" }}
+      </span>
+      {{ end }}
+    </div>
+
+    {{ $files := readDir (printf "content/%s" .File.Dir) }}
+    {{ $featuredImage := "" }}
+    {{ range $files }}
+      {{ if or (eq .Name "featured.jpg") (eq .Name "featured.png") }}
+        {{ $featuredImage = .Name }}
+      {{ end }}
+    {{ end }}
+    {{ if $featuredImage }}
+    <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width:720px;max-height:439px">
+      <div style="position:relative">
+        <img src="{{ printf "%s%s" .RelPermalink $featuredImage }}" 
+             width="720" 
+             height="439" 
+             alt="{{ .Title }}" 
+             class="featured-image">
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="article-container">
+    <div class="article-style">
+      {{ .Content }}
+    </div>
+    {{ partial "page_footer" . }}
+  </div>
+</div>
+
+{{- end -}} 

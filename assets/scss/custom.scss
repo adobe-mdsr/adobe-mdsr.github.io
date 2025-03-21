@@ -1,0 +1,116 @@
+/* Common styles for article metadata */
+.article-metadata {
+  margin-bottom: 1rem;
+  
+  a {
+    color: #007bff;
+    font-weight: 500;
+  }
+  
+  .article-date {
+    color: #6c757d;
+    font-weight: 500;
+  }
+  
+  .middot-divider {
+    padding: 0 0.45rem;
+  }
+  
+  .middot-divider::after {
+    content: '\00B7';
+  }
+}
+
+/* Custom styles for post layout */
+.pub {
+  .article-container {
+    h1 {
+      font-weight: 700;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .article-metadata {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Style for compact list view */
+.media.stream-item {
+  .stream-meta.article-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.5rem;
+    
+    div {
+      margin-bottom: 0;
+      display: inline-flex;
+    }
+    
+    a {
+      color: #007bff;
+      font-weight: 500;
+    }
+    
+    .article-date {
+      color: #6c757d;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .middot-divider {
+      padding: 0 0.45rem;
+      display: inline-flex;
+    }
+    
+    .middot-divider::after {
+      content: '\00B7';
+    }
+  }
+  
+  .news-summary {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+}
+
+/* Improve news index page */
+.universal-wrapper {
+  .news-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .news-list {
+    margin-top: 1rem;
+  }
+  
+  .media.stream-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    .stream-meta.article-metadata {
+      .article-date {
+        font-size: 0.95rem;
+      }
+    }
+  }
+} 
