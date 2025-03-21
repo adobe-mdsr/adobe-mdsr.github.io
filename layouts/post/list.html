@@ -1,0 +1,23 @@
+{{- define "main" -}}
+
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper">
+  <div class="news-header mb-4">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+    <div class="article-style">{{ . }}</div>
+    {{ end }}
+  </div>
+
+  <div class="news-list">
+    {{ $paginator := .Paginate .Data.Pages }}
+    {{ range $paginator.Pages }}
+      {{ partial "li_compact" . }}
+    {{ end }}
+  </div>
+
+  {{ partial "pagination" . }}
+</div>
+
+{{- end -}} 

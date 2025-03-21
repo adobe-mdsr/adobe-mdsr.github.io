@@ -47,6 +47,18 @@ sections:
 
   - block: collection
     content:
+      title: Latest News
+      text: ""
+      count: 5
+      filters:
+        folders:
+          - post
+    design:
+      view: compact
+      columns: '1'
+
+  - block: collection
+    content:
       title: Publications
       text: ""
       count: 5

@@ -1,0 +1,91 @@
+{{ $item := . }}
+
+{{/* Dynamic view adjusts to content type. */}}
+{{ $show_authors_only := false }}
+{{ $show_buttons := false }}
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <h3 class="article-title mb-0 mt-0">
+      <a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>
+    </h3>
+
+    {{ with $item.Params.subtitle }}
+    <div class="article-style">
+      {{ . | markdownify }}
+    </div>
+    {{ end }}
+    
+    {{ if eq $item.Type "post" }}
+    <div class="article-style news-summary">
+      {{ with $item.Summary }}
+        {{ . | plainify | truncate 150 }}
+      {{ else }}
+        {{ $item.Content | plainify | truncate 150 }}
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="stream-meta article-metadata d-flex flex-wrap align-items-center">
+
+      {{ if eq $item.Type "post" }}
+      <div class="d-inline-flex mr-2">
+        {{ if $item.Params.authors }}
+          {{ $authorLen := len $item.Params.authors }}
+          {{ range $k, $v := $item.Params.authors }}
+            {{ $authorPage := site.GetPage (printf "/authors/%s" (urlize $v)) }}
+            {{ $is_people_author := false }}
+            {{ if $authorPage }}
+              {{ if in $authorPage.Params.user_groups "Researchers" }}
+                {{ $is_people_author = true }}
+              {{ end }}
+            {{ end }}
+            {{ if and $authorPage $is_people_author }}
+              <span><a href="{{ $authorPage.RelPermalink }}">{{ $v }}</a></span>{{ if lt $k (sub $authorLen 1) }},&nbsp;{{ end }}
+            {{ else }}
+              <span>{{ $v }}</span>{{ if lt $k (sub $authorLen 1) }},&nbsp;{{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ if and (eq $item.Type "post") $item.Params.authors $item.Params.date }}<span class="middot-divider d-inline-flex"></span>{{ end }}
+      {{ if $item.Params.date }}
+      <span class="article-date d-inline-flex align-items-center">
+        <i class="far fa-calendar-alt mr-1"></i>
+        {{ $date := $item.Params.date | time.Format "January 2, 2006" }}
+        {{ $date }}
+      </span>
+      {{ end }}
+
+    </div>
+
+    {{ if $show_buttons }}
+    <div class="btn-links">
+      {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+    </div>
+    {{ end }}
+
+  </div>
+  <div class="ml-3">
+    {{ $hasImage := false }}
+    {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ with $resource }}
+      {{ $hasImage = true }}
+      {{ $image := .Resize "150x" }}
+      <a href="{{$item.RelPermalink}}">
+        <img src="{{ $image.RelPermalink }}" alt="{{ $item.Title }}" width="150">
+      </a>
+    {{end}}
+
+    {{ if not $hasImage }}
+      {{ with $item.Params.youtube_id }}
+        <a href="{{ $item.RelPermalink }}">
+          <img src="https://img.youtube.com/vi/{{ . }}/0.jpg" alt="{{ $item.Title }}" width="150">
+        </a>
+      {{ end }}
+    {{ end }}
+  </div>
+</div> 
