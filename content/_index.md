@@ -9,7 +9,7 @@ sections:
     content:
       title: We're hiring for research scientists and research associates!
       text: Our team is looking to recruit predoctoral and postdoctoral researchers with backgrounds in natural language processing, computer vision, behavioral sciences, and machine learning.
-        {{% cta cta_link="https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Noida/Research-Scientist_R151257-1" cta_text="Apply now →" %}}
+        {{% cta cta_link="./author/open-positions/" cta_text="Apply now →" %}}
     design:
       background:
         color: '#190707'
