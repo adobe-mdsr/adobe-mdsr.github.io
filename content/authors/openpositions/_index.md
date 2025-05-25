@@ -27,9 +27,9 @@ social:
   - icon: envelope
     icon_pack: fas
     link: 'mailto:applytomdsr@adobe.com'
-  - icon: globe
-    icon_pack: fas
-    link: https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Noida/Research-Scientist_R151257-1
+  #- icon: globe
+  #  icon_pack: fas
+  #  link: https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Noida/Research-Scientist_R151257-1
 
 
 # Highlight the author in author lists? (true/false)
@@ -49,7 +49,7 @@ We are looking to recruit research scientists, research associates, and interns 
 
 ## How to Apply
 
-Please apply through the [Adobe Careers Portal](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Noida/Research-Scientist_R151257-1) for research scientist and research associate positions.
+<!-- Please apply through the [Adobe Careers Portal](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Noida/Research-Scientist_R151257-1) for research scientist and research associate positions. -->
 
-If you want to intern with us, email your CV to [applytomdsr@adobe.com](mailto:applytomdsr@adobe.com).
+Email your CV to [applytomdsr@adobe.com](mailto:applytomdsr@adobe.com).
 
