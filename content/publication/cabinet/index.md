@@ -1,7 +1,7 @@
 ---
 title: "CABINET: Content Relevance based Noise Reduction for Table Question Answering"
 authors:
-- Sohan patnaik
+- Sohan Patnaik
 - Heril Changwal
 - Milan Aggarwal
 - Sumit Bhatia
