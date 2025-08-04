@@ -3,7 +3,7 @@ title: "Measuring and Improving Persuasiveness of Large Language Models"
 authors:
 - Somesh Singh
 - Yaman Kumar Singla
-- Harini SI
+- S I Harini
 - Balaji Krishnamurthy
 
 date: "2025-01-23T00:00:00Z"

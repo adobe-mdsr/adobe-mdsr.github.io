@@ -1,7 +1,7 @@
 ---
 title: "Long-Term Ad Memorability: Understanding & Generating Memorable Ads"
 authors:
-- Harini SI
+- S I Harini
 - Somesh Singh
 - Yaman Kumar Singla
 - Aanisha Bhattacharyya
