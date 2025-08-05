@@ -2,7 +2,7 @@
 title: "LLaVA Finds Free Lunch: Teaching Human Behavior Improves Content Understanding Abilities Of LLMs"
 authors:
 - Somesh Singh
-- Harini SI
+- S I Harini
 - Yaman Kumar Singla
 - Veeky Baths
 - Rajiv Ratn Shah
