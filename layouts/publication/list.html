@@ -1,0 +1,67 @@
+{{- define "main" -}}
+
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      {{ with .Content }}
+      <div class="article-style">{{ . }}</div>
+      {{ end }}
+
+      {{/* Group publications by year */}}
+      {{ $pages := where site.RegularPages "Type" "publication" }}
+      {{ $pages_by_year := slice }}
+      {{ range $pages.GroupByDate "2006" "desc" }}
+        {{ $year := .Key }}
+        
+        {{/* Separate workshop and non-workshop papers */}}
+        {{ $non_workshop := slice }}
+        {{ $workshop := slice }}
+        
+        {{ range .Pages }}
+          {{ $is_workshop := false }}
+          {{ if .Params.publication }}
+            {{ $pub := .Params.publication | lower }}
+            {{ $pub_short := "" }}
+            {{ if .Params.publication_short }}
+              {{ $pub_short = .Params.publication_short | lower }}
+            {{ end }}
+            {{ if or (in $pub "workshop") (in $pub_short "workshop") }}
+              {{ $is_workshop = true }}
+            {{ end }}
+          {{ end }}
+          
+          {{ if $is_workshop }}
+            {{ $workshop = $workshop | append . }}
+          {{ else }}
+            {{ $non_workshop = $non_workshop | append . }}
+          {{ end }}
+        {{ end }}
+        
+        {{/* Display year heading */}}
+        <h2 class="year">{{ $year }}</h2>
+        
+        {{/* Display non-workshop papers first */}}
+        {{ range $non_workshop }}
+          {{ $item := . }}
+          <div class="stream-item">
+            {{ partial "views/citation-custom" (dict "item" $item) }}
+          </div>
+        {{ end }}
+        
+        {{/* Display workshop papers at the end */}}
+        {{ range $workshop }}
+          {{ $item := . }}
+          <div class="stream-item">
+            {{ partial "views/citation-custom" (dict "item" $item) }}
+          </div>
+        {{ end }}
+        
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+{{- end -}}
+
