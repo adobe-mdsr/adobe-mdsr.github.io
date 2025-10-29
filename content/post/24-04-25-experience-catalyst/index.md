@@ -1,5 +1,5 @@
 ---
-title: "GenAI-Powered Large-Scale Quality Assurance Tools in Experience Catalyst"
+title: "Transform your website to Adobe Experience Manager Edge Delivery Services with AI-powered automation"
 date: 2025-10-29
 image:
   focal_point: 'top'
