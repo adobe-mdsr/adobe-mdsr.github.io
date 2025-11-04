@@ -1,7 +1,7 @@
 ---
 title: "CABINET: Content Relevance based Noise Reduction for Table Question Answering"
 authors:
-- Sohan patnaik
+- Sohan Patnaik
 - Heril Changwal
 - Milan Aggarwal
 - Sumit Bhatia
@@ -15,7 +15,7 @@ publishDate: "2024-02-13T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "International Conference on Learning Representations (ICLR) 2024"
+publication: "ICLR"
 publication_short: "ICLR"
 
 abstract: "Table understanding capability of Large Language Models (LLMs) has been extensively studied through the task of question-answering (QA) over tables. Typically, only a small part of the whole table is relevant to derive the answer for a given question. The irrelevant parts act as noise and are distracting information, resulting in sub-optimal performance due to the vulnerability of LLMs to noise. To mitigate this, we propose CABINET (Content RelevAnce-Based NoIse ReductioN for TablE QuesTion-Answering) - a framework to enable LLMs to focus on relevant tabular data by suppressing extraneous information. CABINET comprises an Unsupervised Relevance Scorer (URS), trained differentially with the QA LLM, that weighs the table content based on its relevance to the input question before feeding it to the question-answering LLM (QA LLM). To further aid the relevance scorer, CABINET employs a weakly supervised module that generates a parsing statement describing the criteria of rows and columns relevant to the question and highlights the content of corresponding table cells. CABINET significantly outperforms various tabular LLM baselines, as well as GPT3-based in-context learning methods, is more robust to noise, maintains outperformance on tables of varying sizes, and establishes new SoTA performance on WikiTQ, FeTaQA, and WikiSQL datasets. We release our code and datasets at [this https URL](https://github.com/Sohanpatnaik106/CABINET_QA)."

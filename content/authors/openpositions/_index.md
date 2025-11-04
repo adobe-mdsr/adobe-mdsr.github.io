@@ -10,7 +10,7 @@ last_name: Positions
 superuser: false
 
 # Role/position
-role: Research Scientists and Research Associates
+role: Research Scientists, Associates, and Interns
 
 # Organizations/Affiliations
 organizations:
@@ -20,14 +20,16 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio:
 
-interests:
-  - Natural Language Processing
-  - Computer Vision
-  - Behavioral Sciences
-  - Machine Learning
+
 
 # Social/Academic Networking
 social:
+  - icon: envelope
+    icon_pack: fas
+    link: 'mailto:applytomdsr@adobe.com'
+  #- icon: globe
+  #  icon_pack: fas
+  #  link: https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Noida/Research-Scientist_R151257-1
 
 
 # Highlight the author in author lists? (true/false)
@@ -38,8 +40,8 @@ user_groups:
   - Open Positions
 ---
 
-# Research Scientists and Research Associates
-We are looking to recruit research scientists and research associates with backgrounds in:
+# Research Scientists, Associates, and Interns
+We are looking to recruit research scientists, research associates, and interns with backgrounds in:
 - Natural Language Processing
 - Computer Vision
 - Behavioral Sciences
@@ -47,5 +49,7 @@ We are looking to recruit research scientists and research associates with backg
 
 ## How to Apply
 
-Please apply through the [Adobe Careers Portal](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Noida/Research-Scientist_R151257-1).
+<!-- Please apply through the [Adobe Careers Portal](https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Noida/Research-Scientist_R151257-1) for research scientist and research associate positions. -->
+
+Email your CV to [applytomdsr@adobe.com](mailto:applytomdsr@adobe.com).
 

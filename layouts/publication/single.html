@@ -1,0 +1,135 @@
+{{- define "main" -}}
+
+<div class="pub">
+
+  {{ partial "page_header.html" . }}
+
+  <div class="article-container pt-3">
+    <h1>{{ .Title }}</h1>
+    <div class="article-metadata">
+      <div>
+        {{ $authorLen := len .Params.authors }}
+        {{ range $k, $v := .Params.authors }}
+          {{ $authorPage := site.GetPage (printf "/authors/%s" (urlize $v)) }}
+          {{ $is_people_author := false }}
+          {{ if $authorPage }}
+            {{ if in $authorPage.Params.user_groups "Researchers" }}
+              {{ $is_people_author = true }}
+            {{ end }}
+          {{ end }}
+          {{ if and $authorPage $is_people_author }}
+            <span><a href="{{ $authorPage.RelPermalink }}">{{ $v }}</a></span>{{ if lt $k (sub $authorLen 1) }}, {{ end }}
+          {{ else }}
+            <span>{{ $v }}</span>{{ if lt $k (sub $authorLen 1) }}, {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ if .Params.publication_date }}
+        <span class="article-date">{{ .Params.publication_date | time.Format "January 2006" }}</span>
+      {{ else if .Params.date }}
+        <span class="article-date">{{ .Date | time.Format "January 2006" }}</span>
+      {{ end }}
+    </div>
+
+    {{ if or .Params.links .Params.url_pdf .Params.url_code .Params.url_dataset .Params.url_project }}
+    <div class="btn-links mb-3">
+      {{ range .Params.links }}
+        <a class="btn btn-outline-primary btn-page-header" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}
+        </a>
+      {{ end }}
+      {{ with .Params.url_pdf }}
+        <a class="btn btn-outline-primary btn-page-header" href="{{ . }}" target="_blank" rel="noopener">PDF
+        </a>
+      {{ end }}
+      {{ with .Params.url_code }}
+        <a class="btn btn-outline-primary btn-page-header" href="{{ . }}" target="_blank" rel="noopener">Code
+        </a>
+      {{ end }}
+      {{ with .Params.url_dataset }}
+        <a class="btn btn-outline-primary btn-page-header" href="{{ . }}" target="_blank" rel="noopener">Dataset
+        </a>
+      {{ end }}
+      {{ with .Params.url_project }}
+        <a class="btn btn-outline-primary btn-page-header" href="{{ . }}" target="_blank" rel="noopener">Project</a>
+      {{ end }}
+      <a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename="{{ .RelPermalink }}cite.bib">Cite
+      </a>
+    </div>
+    {{ end }}
+  </div>
+
+  {{ $files := readDir (printf "content/%s" .File.Dir) }}
+  {{ $featuredImage := "" }}
+  {{ range $files }}
+    {{ if or (eq .Name "featured.jpg") (eq .Name "featured.png") }}
+      {{ $featuredImage = .Name }}
+    {{ end }}
+  {{ end }}
+  {{ if $featuredImage }}
+  <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width:720px;max-height:439px">
+    <div style="position:relative">
+      <img src="{{ printf "%s%s" .RelPermalink $featuredImage }}" 
+           width="720" 
+           height="439" 
+           alt="{{ .Title }}" 
+           class="featured-image">
+    </div>
+  </div>
+  {{ end }}
+
+  <div class="article-container">
+
+    {{ if .Params.abstract }}
+    <h3>{{ i18n "abstract" }}</h3>
+    <p class="pub-abstract">{{ .Params.abstract | markdownify }}</p>
+    {{ end }}
+
+    {{ if and (.Params.publication_types) (ne (index .Params.publication_types 0) "0") }}
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">{{ i18n "publication_type" }}</div>
+          <div class="col-12 col-md-9">
+            {{ $pub_types := partial "functions/get_pub_types" $ }}
+            {{ range $index, $pubtype := .Params.publication_types }}
+            <a href="{{ (site.GetPage "publication_types").RelPermalink }}#{{ . | urlize }}">
+              {{ if eq (printf "%T" .) "string" }}
+                {{ . }}
+              {{ else }}
+                {{ index $pub_types (int .) }}
+              {{ end }}
+            </a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    {{ end }}
+
+    {{ if .Params.publication }}
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">{{ i18n "publication" }}</div>
+          <div class="col-12 col-md-9">{{ .Params.publication | markdownify }}</div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    {{ end }}
+
+    <div class="space-below"></div>
+
+    <div class="article-style">{{ .Content }}</div>
+
+    {{ partial "page_footer" . }}
+
+  </div>
+</div>
+
+{{- end -}} 

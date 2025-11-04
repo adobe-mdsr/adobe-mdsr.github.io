@@ -9,7 +9,7 @@ sections:
     content:
       title: We're hiring for research scientists and research associates!
       text: Our team is looking to recruit predoctoral and postdoctoral researchers with backgrounds in natural language processing, computer vision, behavioral sciences, and machine learning.
-        {{% cta cta_link="https://adobe.wd5.myworkdayjobs.com/external_experienced/job/Noida/Research-Scientist_R151257-1" cta_text="Apply now →" %}}
+        {{% cta cta_link="./author/open-positions/" cta_text="Apply now →" %}}
     design:
       background:
         color: '#190707'
@@ -22,9 +22,6 @@ sections:
       image:
         filename: icon.png
       text: |
-        <br>
-        <h2> Website is a work in progress. Please check back later. </h2>
-        <br>
         <br>
         The MDSR Lab is a group of researchers committed to solving hard problems in the broad area of digital media and marketing. The group develops cutting-edge machine learning approaches for important use cases including content understanding and generation, behavior modeling, and human-computer interaction.
         
@@ -47,6 +44,18 @@ sections:
   #     spacing:
   #       padding: ['20px', '0', '20px', '0']
   #     css_class: fullscreen
+
+  - block: collection
+    content:
+      title: Latest News
+      text: ""
+      count: 5
+      filters:
+        folders:
+          - post
+    design:
+      view: compact
+      columns: '1'
 
   - block: collection
     content:
