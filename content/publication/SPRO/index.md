@@ -34,7 +34,7 @@ featured: true
 
 
 links:
-url_pdf: ""
+url_pdf: "https://openreview.net/forum?id=A4JiifkTzq"
 url_code: ""
 url_dataset: ""
 url_poster: ""
