@@ -1,5 +1,5 @@
 ---
-title: "Template Accelerator: Convert an Image to an Email Template"
+title: "Adobe Journey Optimizer Template Accelerator: Convert an Image to an Email Template"
 date: 2025-11-13
 image:
   focal_point: 'top'
