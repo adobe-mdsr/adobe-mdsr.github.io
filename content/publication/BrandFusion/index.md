@@ -32,7 +32,7 @@ featured: true
 
 
 links:
-url_pdf: ""
+url_pdf: "https://behavior-in-the-wild.github.io/static/pdf/BrandFusion_WACV2026.pdf"
 url_code: ""
 url_dataset: ""
 url_poster: ""
