@@ -1,7 +1,7 @@
 ---
 title: "BrandFusion: Aligning Image Generation with Brand Styles"
 authors:
-- Parul Gupta
+- Parul
 - Varun Khurana
 - Yaman Kumar Singla
 - Balaji Krishnamurthy
