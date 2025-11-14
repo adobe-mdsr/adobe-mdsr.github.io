@@ -52,4 +52,4 @@ The MDSR team has implemented rigorous benchmarking protocols to ensure AQA deli
 
 Learn more about Adobe's AI Agent capabilities:
 - [Adobe Announces General Availability of AI Agents](https://business.adobe.com/blog/adobe-announces-general-availability-of-ai-agents)
-
+- [Sales Qualifier App](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/ai-assistant/ai-agents/sales-qualifier)
