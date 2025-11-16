@@ -1,0 +1,74 @@
+{{/* Hugo Blox: People */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $show_social := $block.design.show_social | default false }}
+{{ $show_interests := $block.design.show_interests | default true }}
+{{ $show_organizations := $block.design.show_organizations | default false }}
+{{ $show_role := $block.design.show_role | default true }}
+{{ $sort_by := $block.content.sort_by | default "Title" }}
+{{ $sort_ascending := $block.content.sort_ascending | default true }}
+
+<div class="row justify-content-center people-widget">
+  {{ with $block.content.title }}
+    <div class="section-heading col-12 mb-3 text-center">
+      <h1 class="mb-0">{{ . | markdownify | emojify }}</h1>
+      {{ with $block.content.subtitle }}<p class="mt-1">{{ . | markdownify | emojify }}</p>{{ end }}
+    </div>
+  {{ end }}
+
+  {{ with $block.content.text }}
+    <div class="col-md-12">
+      {{ . | emojify | $page.RenderString }}
+    </div>
+  {{ end }}
+
+  {{ range $block.content.user_groups }}
+    {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
+    
+    {{/* Apply sorting */}}
+    {{ if $sort_ascending }}
+      {{ $query = sort $query $sort_by }}
+    {{ else }}
+      {{ $query = sort $query $sort_by "desc" }}
+    {{ end }}
+
+    {{if $query | and (gt (len $block.content.user_groups) 1) }}
+      <div class="col-md-12">
+        <h2 class="mb-4">{{ . | markdownify }}</h2>
+      </div>
+    {{end}}
+
+    {{ range $query }}
+      {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+      <div class="col-12 col-sm-auto people-person">
+
+        {{/* Avatar. */}}
+        {{ if $avatar }}
+          {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+          <img class="avatar avatar-circle" src="{{ $avatar_image.RelPermalink }}" alt="{{.Title}}">
+        {{ else }}
+          <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/{{ md5 .Params.email }}?s=270" alt="{{.Title}}">
+        {{ end }}
+
+        <div class="portrait-title">
+          {{/* Name. */}}
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+
+          {{/* Role. */}}
+          {{ if $show_role }}{{ with .Params.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}{{ end }}
+
+          {{/* Social Links. */}}
+          {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
+
+          {{/* Interests. */}}
+          {{ if and $show_interests .Params.interests }}<p class="people-interests">{{ delimit .Params.interests ", " | markdownify | emojify }}</p>{{ end }}
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+
+</div> 

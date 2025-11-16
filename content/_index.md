@@ -9,7 +9,7 @@ sections:
     content:
       title: We're hiring for research scientists and research associates!
       text: Our team is looking to recruit predoctoral and postdoctoral researchers with backgrounds in natural language processing, computer vision, behavioral sciences, and machine learning.
-        {{% cta cta_link="./author/open-positions/" cta_text="Apply now →" %}}
+        {{% cta cta_link="./people/open-positions/" cta_text="Apply now →" %}}
     design:
       background:
         color: '#190707'
