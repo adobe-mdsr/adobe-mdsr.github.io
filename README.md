@@ -13,11 +13,14 @@ This is the website for the Adobe Media and Data Science Research (MDSR) Laborat
 
 #### Adding/Updating your profile
 
-1. Add your profile to the `content/authors/` directory by creating a new folder with your name.
-2. Copy the `_index.md` file from `content/authors/admin/_index.md` to your new folder. Make sure not to rename the file.
-3. Update the `_index.md` file with your information.
-4. Add your profile picture to your folder with the name `avatar.jpg`.
-5. Compile the website and verify the changes by running `hugo server -D` and commit the changes to the repository by raising a PR on the main branch of the base repository from your forked repository.hu
+**Note:** Profile files are stored in `content/authors/` (required by Hugo Blox), but appear as `/people/` URLs on the website.
+
+1. Add your profile to the `content/authors/` directory by creating a new folder with your name (use lowercase and hyphens, e.g., `yaman-kumar-singla`).
+2. Copy the `_index.md` file from an existing person's folder (e.g., `content/authors/yaman-kumar-singla/_index.md`) to your new folder. Make sure not to rename the file.
+3. Update the `_index.md` file with your information. Make sure to set `user_groups` to include `["Researchers"]` to appear on the People page.
+4. Add your profile picture to your folder with the name `avatar.jpg` or `avatar.png`.
+5. Compile the website and verify the changes by running `hugo server -D`. Your profile will be available at `https://adobe.mdsr.live/people/your-name/`.
+6. Commit the changes to the repository by raising a PR on the main branch of the base repository from your forked repository.
 
 
 #### Adding your publications
