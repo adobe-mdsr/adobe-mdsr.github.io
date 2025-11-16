@@ -17,7 +17,7 @@ main:
     url: people
     weight: 40
   - name: Join us!
-    url: '/author/open-positions/'
+    url: '/people/open-positions/'
     weight: 50
 #  - name: Posts
 #    url: post

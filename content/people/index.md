@@ -13,7 +13,7 @@ sections:
       user_groups:
           - Researchers
           - Open Positions
-      sort_by: Params.first_name
+      sort_by: Title
       sort_ascending: true
     design:
       show_interests: true
