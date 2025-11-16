@@ -1,0 +1,68 @@
+# Netlify redirects
+# Automatically generated
+# Documentation: https://docs.netlify.com/routing/redirects/
+{{- /* Note: code purposely un-indented to preserve required spacing in output. */ -}}
+{{- range $page := where site.AllPages ".Aliases" "!=" nil -}}
+{{- range $page.Aliases }}
+{{ .|relLangURL }} {{ $page.RelPermalink -}}
+{{- end }}
+{{- end -}}
+
+# Custom redirects for /author/ and /authors/ to /people/
+/author/aanisha-bhattacharyya/*   /people/aanisha-bhattacharyya/:splat   301
+/authors/aanisha-bhattacharyya/*  /people/aanisha-bhattacharyya/:splat   301
+/author/aditya-arun/*             /people/aditya-arun/:splat             301
+/authors/aditya-arun/*            /people/aditya-arun/:splat             301
+/author/aditya-basu/*             /people/aditya-basu/:splat             301
+/authors/aditya-basu/*            /people/aditya-basu/:splat             301
+/author/amokh-varma/*             /people/amokh-varma/:splat             301
+/authors/amokh-varma/*            /people/amokh-varma/:splat             301
+/author/aradhya-neeraj-mathur/*   /people/aradhya-neeraj-mathur/:splat   301
+/authors/aradhya-neeraj-mathur/*  /people/aradhya-neeraj-mathur/:splat   301
+/author/ashutosh-srivastava/*     /people/ashutosh-srivastava/:splat     301
+/authors/ashutosh-srivastava/*    /people/ashutosh-srivastava/:splat     301
+/author/balaji-krishnamurthy/*    /people/balaji-krishnamurthy/:splat    301
+/authors/balaji-krishnamurthy/*   /people/balaji-krishnamurthy/:splat    301
+/author/h-s-v-n-s-kowndinya-renduchintala/*   /people/h-s-v-n-s-kowndinya-renduchintala/:splat   301
+/authors/h-s-v-n-s-kowndinya-renduchintala/*  /people/h-s-v-n-s-kowndinya-renduchintala/:splat   301
+/author/mausoom-sarkar/*          /people/mausoom-sarkar/:splat          301
+/authors/mausoom-sarkar/*         /people/mausoom-sarkar/:splat          301
+/author/mayur-hemani/*            /people/mayur-hemani/:splat            301
+/authors/mayur-hemani/*           /people/mayur-hemani/:splat            301
+/author/milan-aggarwal/*          /people/milan-aggarwal/:splat          301
+/authors/milan-aggarwal/*         /people/milan-aggarwal/:splat          301
+/author/neeraj-anand/*            /people/neeraj-anand/:splat            301
+/authors/neeraj-anand/*           /people/neeraj-anand/:splat            301
+/author/nikitha-sr/*              /people/nikitha-sr/:splat              301
+/authors/nikitha-sr/*             /people/nikitha-sr/:splat              301
+/author/openpositions/*           /people/openpositions/:splat           301
+/authors/openpositions/*          /people/openpositions/:splat           301
+/author/parul/*                   /people/parul/:splat                   301
+/authors/parul/*                  /people/parul/:splat                   301
+/author/piyush-gupta/*            /people/piyush-gupta/:splat            301
+/authors/piyush-gupta/*           /people/piyush-gupta/:splat            301
+/author/rishabh-jain/*            /people/rishabh-jain/:splat            301
+/authors/rishabh-jain/*           /people/rishabh-jain/:splat            301
+/author/s-i-harini/*              /people/s-i-harini/:splat              301
+/authors/s-i-harini/*             /people/s-i-harini/:splat              301
+/author/sarthak-mehrotra/*        /people/sarthak-mehrotra/:splat        301
+/authors/sarthak-mehrotra/*       /people/sarthak-mehrotra/:splat        301
+/author/siddarth-ramesh/*         /people/siddarth-ramesh/:splat         301
+/authors/siddarth-ramesh/*        /people/siddarth-ramesh/:splat         301
+/author/siddharth-yedlapati/*     /people/siddharth-yedlapati/:splat     301
+/authors/siddharth-yedlapati/*    /people/siddharth-yedlapati/:splat     301
+/author/sohan-patnaik/*           /people/sohan-patnaik/:splat           301
+/authors/sohan-patnaik/*          /people/sohan-patnaik/:splat           301
+/author/somesh-singh/*            /people/somesh-singh/:splat            301
+/authors/somesh-singh/*           /people/somesh-singh/:splat            301
+/author/sudhir-yarram/*           /people/sudhir-yarram/:splat           301
+/authors/sudhir-yarram/*          /people/sudhir-yarram/:splat           301
+/author/sumit-bhatia/*            /people/sumit-bhatia/:splat            301
+/authors/sumit-bhatia/*           /people/sumit-bhatia/:splat            301
+/author/varun-khurana/*           /people/varun-khurana/:splat           301
+/authors/varun-khurana/*          /people/varun-khurana/:splat           301
+/author/vinay-aggarwal/*          /people/vinay-aggarwal/:splat          301
+/authors/vinay-aggarwal/*         /people/vinay-aggarwal/:splat          301
+/author/yaman-kumar-singla/*      /people/yaman-kumar-singla/:splat      301
+/authors/yaman-kumar-singla/*     /people/yaman-kumar-singla/:splat      301
+

@@ -5,16 +5,6 @@ date: 2022-10-24
 type: landing
 
 sections:
-  - block: markdown
-    content:
-      title: We're hiring for research scientists and research associates!
-      text: Our team is looking to recruit predoctoral and postdoctoral researchers with backgrounds in natural language processing, computer vision, behavioral sciences, and machine learning.
-        {{% cta cta_link="./people/open-positions/" cta_text="Apply now →" %}}
-    design:
-      background:
-        color: '#190707'
-        text_color_light: true
-  
   - block: hero
     content:
       title: |
@@ -24,6 +14,10 @@ sections:
       text: |
         <br>
         The MDSR Lab is a group of researchers committed to solving hard problems in the broad area of digital media and marketing. The group develops cutting-edge machine learning approaches for important use cases including content understanding and generation, behavior modeling, and human-computer interaction.
+        
+        <br> <br> <br>
+        
+        **We're hiring for research scientists and research associates!** Our team is looking to recruit predoctoral and postdoctoral researchers with backgrounds in natural language processing, computer vision, behavioral sciences, and machine learning. [Apply here](mailto:applytomdsr@adobe.com) to join our team.
         
   # - block: markdown
   #   content:
