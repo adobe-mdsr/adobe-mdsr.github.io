@@ -39,6 +39,19 @@
 
 /* Style for compact list view */
 .media.stream-item {
+  .article-title {
+    a {
+      color: #007bff;
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+      
+      &:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+    }
+  }
+  
   .stream-meta.article-metadata {
     display: flex;
     flex-wrap: wrap;
