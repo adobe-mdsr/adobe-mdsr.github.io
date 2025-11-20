@@ -1,24 +1,26 @@
 ---
-title: "Align via actions: Learning behavior aligns LLMs with human opinions in zero-shot"
+title: "ALPHA: Action-Based Learning for Pluralistic Human Alignment in Large Language Models"
 authors:
 - Aanisha Bhattacharyya
 - Susmit Aggarwal
 - Yaman Kumar Singla
 - Tarun Menta
 - Nikitha SR
+- Rajiv Ratn Shah
+- Changyou Chen
 - Balaji Krishnamurthy
 
-date: "2024-01-01T00:00:00Z"
+date: "2025-01-01T00:00:00Z"
 doi: ""
 
-publishDate: "2024-01-01T00:00:00Z"
+publishDate: "2026-01-20T00:00:00Z"
 
 publication_types: ["conference"]
 
-publication: "ACL Rolling Review, Nominated for best paper award"
-publication_short: "ACL"
+publication: "Annual Conference on Artificial Intelligence (AAAI)"
+publication_short: "AAAI Alignment Track"
 
-abstract: "Large language models (LLMs) have become ubiquitous in various applications, but aligning them with societal expectations remains challenging. To align LLMs with humans, current alignment methods rely heavily on human-annotated datasets, which are expensive, difficult to scale, and often biased toward specific demographic subgroups. We introduce a novel approach for LLM alignment by training on behavioral data. Our approach is based on the maxim in psychology that actions (behavior) have a strong consistency with opinions. Leveraging this insight, we developed AlignViaActions (AVA50M) comprising over 50 million samples derived from 1.5 million advertisements, including content and demographic viewing behaviors. We train LLMs on AVA50M, demonstrating significant improvements over existing alignment techniques across multiple societal and cultural alignment benchmarks, including GlobalOpinionQA, OpinionQA, CultureNLI, and CultureBank. Through this, we demonstrate that by observing and learning from behavior, LLMs can infer the underlying opinions and cultural norms. This approach addresses key limitations of current methods, offering improved scalability, demographic representation, and adaptability to evolving societal views. Our results suggest the potential for behavioral data to replace or complement traditional expert-annotation-based alignment techniques. Our datasets and code are available at https://behavior-in-the-wild.github.io/align-via-actions."
+abstract: "Large language models are widely used, but aligning them with societal values remains challenging. Current approaches often rely on human annotations, which are hard to scale, or synthetic data produced by models that may themselves be misaligned, making it difficult to capture genuine public opinion. This limits scalability and introduces demographic biases that reduce the representativeness and fairness of model behavior. We introduce a novel approach to pluralistic alignment through behavioral learning, grounded in the psychological principle that actions (behavior) have strong consistency with opinions. Specifically, we present ALPHA50M, a dataset of over 50 million samples derived from 1.5 million real-world advertisements, incorporating rich behavioral signals inferred from demographic engagement patterns. Models trained on this data achieve state-of-the-art zero-shot performance on diverse alignment benchmarks spanning cultural reasoning, political views, and social values. We also propose two new benchmarks: OpinionQA-XL, which covers surveys across 100+ societal topics, and GSS, which evaluates temporal opinion shift modeling over decades. Our results demonstrate that learning from behavioral signals, derived from observed human actions, enables models to align with diverse demographic opinions, capture underlying social and cultural norms, and generalize to new topics and surveys beyond training data. This behavioral learning paradigm offers a scalable and demographically broad alternative to existing alignment techniques. Our datasets and code are available at https://behavior-in-the-wild.github.io/align-via-actions."
 
 tags:
 - Language models
