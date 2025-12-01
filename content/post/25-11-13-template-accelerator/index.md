@@ -24,8 +24,7 @@ MDSR Lab collaborated with Adobe Journey Optimizer’s B2B team to develop and i
 Learn more about Template Accelerator:
 
 - [Template Accelerator](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/content-management/templates/email-templates/email-template-image-convert)
-- [Marketo Nation]([https://images-tv.adobe.com/mpcv3/11155/ea16f336-1231-4fd9-bd09-79d40db52ce0_1762445736.854x480at800_h264.mp4](https://nation.marketo.com/t5/product-blogs/turn-images-into-email-templates-in-seconds-no-coding-required/ba-p/358746))
-
+- [Marketo Nation](https://nation.marketo.com/t5/product-blogs/turn-images-into-email-templates-in-seconds-no-coding-required/ba-p/358746)
 
 Demo of Template Accelerator: [Link](https://images-tv.adobe.com/mpcv3/11155/ea16f336-1231-4fd9-bd09-79d40db52ce0_1762445736.854x480at800_h264.mp4)
 
