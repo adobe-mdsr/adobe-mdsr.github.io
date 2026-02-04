@@ -30,11 +30,9 @@
       {{end}}
 
       {{/* Show date */}}
-      {{ if and .Params.authors .Date }}<span class="middot-divider d-inline-flex"></span>{{ end }}
       {{ if .Date }}
       <span class="article-date d-inline-flex align-items-center">
-        <i class="far fa-calendar-alt mr-1"></i>
-        {{ .Date.Format "January 2, 2006" }}
+        {{ if .Params.authors }},{{ end }}{{ .Date.Format "January 2, 2006" }}
       </span>
       {{ end }}
     </div>

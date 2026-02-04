@@ -9,7 +9,6 @@ authors:
 - Yaman Kumar Singla
 - Balaji Krishnamurthy
 
-date: "2025-10-29T00:00:00Z"
 publishDate: "2025-10-29T00:00:00Z"
 
 ---

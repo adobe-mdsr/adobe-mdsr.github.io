@@ -4,6 +4,7 @@
 {{ $page := .page }}
 {{ $share := .share | default false }}
 {{ $site := .Site | default site }}
+{{ $dateFormat := ($site.Params.locale.date_format | default $site.Params.date_format | default "Jan 2, 2006") }}
 
 <div class="article-metadata">
 
@@ -54,14 +55,14 @@
   {{/* If `date` is set, display date */}}
   {{ if not (in (slice "talk" "page") $page.Type) }}
   <span class="article-date">
-    {{ $date := $page.Lastmod.Format ($site.Params.date_format | default "January 2, 2006") }}
+    {{ $date := $page.Lastmod.Format $dateFormat }}
     {{ if eq $page.Type "publication" }}
       {{ $date = $page.Date.Format ($site.Params.publications.date_format | default "January, 2006") }}
     {{ else }}
       {{ if not $page.Lastmod.IsZero }}
-        {{ $date = $page.Lastmod.Format ($site.Params.date_format | default "January 2, 2006") }}
+        {{ $date = $page.Lastmod.Format $dateFormat }}
       {{ else if not $page.Date.IsZero }}
-        {{ $date = $page.Date.Format ($site.Params.date_format | default "January 2, 2006") }}
+        {{ $date = $page.Date.Format $dateFormat }}
       {{ end }}
     {{ end }}
     {{ $date }}
