@@ -60,6 +60,9 @@ sections:
         folders:
           - publication
         publication_type: 'conference'
+      archive:
+        enable: true
+        link: publication/
     design:
       view: citation-custom
       columns: '1'

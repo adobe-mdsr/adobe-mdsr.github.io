@@ -53,7 +53,7 @@
 
       {{ if not $item.Date.IsZero }}
       <span class="article-date d-inline-flex align-items-center">
-        {{ if $item.Params.authors }},{{ end }}{{ $item.Date.Format "January 2, 2006" }}
+        {{ if $item.Params.authors }},&nbsp;{{ end }}{{ $item.Date.Format "January 2, 2006" }}
       </span>
       {{ end }}
 
@@ -73,7 +73,7 @@
       {{ $hasImage = true }}
       {{ $image := .Resize "150x" }}
       <a href="{{$item.RelPermalink}}">
-        <img src="{{ $image.RelPermalink }}" alt="{{ $item.Title }}" width="150">
+        <img src="{{ $image.RelPermalink }}" alt="{{ $item.Title }}" width="150" loading="lazy">
       </a>
     {{end}}
 

@@ -6,7 +6,8 @@
   <div style="flex: 0 0 200px;">
     {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
     {{ with $resource }}
-      <img src="{{ .RelPermalink }}" alt="{{ $item.Title }}" style="width: 100%; height: auto; border-radius: 4px;">
+      {{ $thumb := .Fill "400x300" }}
+      <img src="{{ $thumb.RelPermalink }}" alt="{{ $item.Title }}" width="200" height="150" loading="lazy" style="width: 100%; height: auto; border-radius: 4px;">
     {{ end }}
   </div>
 
@@ -17,10 +18,16 @@
     {{/* New Format: paper name, authors, venue, year */}}
     <a href="{{ $item.RelPermalink }}" class="underline">{{ $item.Title }}</a>,
     <span class="article-metadata li-cite-author">
-      {{ partial "page_metadata_authors_custom" $item }}
-    </span>
-    {{if $item.Params.publication_short }}
-      {{- $item.Params.publication_short | markdownify -}},
+      {{ partial "page_metadata_authors_custom" $item -}}
+    </span>.
+    {{ if $item.Params.publication_short }}
+      {{- $pub_short := $item.Params.publication_short | lower -}}
+      {{- $item.Params.publication_short | markdownify -}}
+      {{- if $item.Params.publication }}
+        {{- $pub := $item.Params.publication | lower -}}
+        {{- if and (in $pub "findings") (not (in $pub_short "findings")) }} (Findings){{ end -}}
+        {{- if and (in $pub "workshop") (not (in $pub_short "workshop")) }} (Workshop){{ end -}}
+      {{- end -}},
     {{ else if $item.Params.publication }}
       {{- $item.Params.publication | markdownify -}},
     {{ end }}

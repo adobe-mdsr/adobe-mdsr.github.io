@@ -49,9 +49,9 @@
         {{/* Avatar. */}}
         {{ if $avatar }}
           {{ $avatar_image := $avatar.Fill "270x270 Center" }}
-          <img class="avatar avatar-circle" src="{{ $avatar_image.RelPermalink }}" alt="{{.Title}}">
+          <img class="avatar avatar-circle" src="{{ $avatar_image.RelPermalink }}" alt="{{.Title}}" width="270" height="270" loading="lazy">
         {{ else }}
-          <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/{{ md5 .Params.email }}?s=270" alt="{{.Title}}">
+          <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/{{ md5 .Params.email }}?s=270" alt="{{.Title}}" width="270" height="270" loading="lazy">
         {{ end }}
 
         <div class="portrait-title">
