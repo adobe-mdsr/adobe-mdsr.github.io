@@ -17,8 +17,6 @@ sections:
         
         <br> <br> <br>
         
-        **We're hiring for research scientists and research associates!** Our team is looking to recruit predoctoral and postdoctoral researchers with backgrounds in natural language processing, computer vision, behavioral sciences, and machine learning. [Apply here](mailto:applytomdsr@adobe.com) to join our team.
-        
   # - block: markdown
   #   content:
   #     title:
@@ -41,14 +39,14 @@ sections:
 
   - block: collection
     content:
-      title: Latest News
+      title: Impact
       text: ""
       count: 5
       filters:
         folders:
-          - post
+          - impact
     design:
-      view: compact
+      view: impact-citation
       columns: '1'
 
   - block: collection

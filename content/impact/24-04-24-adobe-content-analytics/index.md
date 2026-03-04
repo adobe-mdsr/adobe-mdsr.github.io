@@ -48,4 +48,4 @@ Content Analytics unlocks a new level of insights with AI and ML services that a
 Cross-channel performance capabilities that help understand how paid media and email assets lead to conversions are currently in development.
 
 Learn more about these powerful capabilities:
-- [Adobe Content Analytics](https://business.adobe.com/in/products/adobe-analytics/content-analytics.html) 
+- [Adobe Content Analytics](https://business.adobe.com/products/adobe-analytics/content-analytics.html) 

@@ -10,7 +10,7 @@
     <div class="article-metadata d-flex flex-wrap align-items-center">
       {{/* Display authors if they exist */}}
       {{ if .Params.authors }}
-      <div class="d-inline-flex mr-2">
+      <div class="d-inline-flex">
         {{ $authorLen := len .Params.authors }}
         {{ range $k, $v := .Params.authors }}
           {{ $authorPage := site.GetPage (printf "/authors/%s" (urlize $v)) }}
@@ -21,37 +21,32 @@
             {{ end }}
           {{ end }}
           {{ if and $authorPage $is_people_author }}
-            <span><a href="{{ $authorPage.RelPermalink }}">{{ $v }}</a></span>{{ if lt $k (sub $authorLen 1) }}, {{ end }}
+            <span><a href="{{ $authorPage.RelPermalink }}">{{ $v }}</a></span>{{ if lt $k (sub $authorLen 1) }},&nbsp;{{ end }}
           {{ else }}
-            <span>{{ $v }}</span>{{ if lt $k (sub $authorLen 1) }}, {{ end }}
+            <span>{{ $v }}</span>{{ if lt $k (sub $authorLen 1) }},&nbsp;{{ end }}
           {{ end }}
         {{ end }}
+        {{ if .Date }},&nbsp;{{ end }}
       </div>
       {{end}}
 
       {{/* Show date */}}
       {{ if .Date }}
       <span class="article-date d-inline-flex align-items-center">
-        {{ if .Params.authors }},{{ end }}{{ .Date.Format "January 2, 2006" }}
+        {{ .Date.Format "January 2, 2006" }}
       </span>
       {{ end }}
     </div>
 
-    {{ $files := readDir (printf "content/%s" .File.Dir) }}
-    {{ $featuredImage := "" }}
-    {{ range $files }}
-      {{ if or (eq .Name "featured.jpg") (eq .Name "featured.png") }}
-        {{ $featuredImage = .Name }}
-      {{ end }}
-    {{ end }}
-    {{ if $featuredImage }}
-    <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width:720px;max-height:439px">
+    {{ with (.Resources.ByType "image").GetMatch "*featured*" }}
+    <div class="article-header article-container featured-image-wrapper mt-4 mb-4">
       <div style="position:relative">
-        <img src="{{ printf "%s%s" .RelPermalink $featuredImage }}" 
-             width="720" 
-             height="439" 
-             alt="{{ .Title }}" 
-             class="featured-image">
+        <img src="{{ .RelPermalink }}" 
+             width="{{ .Width }}" 
+             height="{{ .Height }}" 
+             alt="{{ $.Title }}" 
+             class="featured-image" 
+             style="max-width:100%;height:auto;">
       </div>
     </div>
     {{ end }}
