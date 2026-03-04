@@ -1,3 +1,61 @@
+/* Shared citation layout for publications and impact (homepage + /publication/ + /impact/) */
+.pub-list-item.view-citation {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  font-size: 0.95rem;
+
+  /* Thumbnail column */
+  > div:first-child {
+    flex: 0 0 200px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  }
+
+  /* Content column */
+  > div:last-child {
+    flex: 1;
+  }
+
+  /* Title: more prominent than authors */
+  .article-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .article-title a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .article-title a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  /* Authors, venue, date: consistent secondary style */
+  .cite-meta {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6c757d;
+
+    a {
+      color: #007bff;
+      font-weight: 400;
+
+      &:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 /* Common styles for article metadata */
 .article-metadata {
   margin-bottom: 1rem;

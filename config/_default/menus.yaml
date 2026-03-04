@@ -7,8 +7,8 @@ main:
 #  - name: Tour
 #    url: tour
 #    weight: 10
-  - name: News
-    url: post
+  - name: Impact
+    url: impact
     weight: 20
   - name: Publications
     url: publication

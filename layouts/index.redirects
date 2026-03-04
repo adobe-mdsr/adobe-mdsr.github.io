@@ -12,3 +12,6 @@
 /author/*    /people/:splat   301
 /authors/*   /people/:splat   301
 
+# Redirect old /post/ URLs to /impact/ for backward compatibility
+/post/*      /impact/:splat   301
+

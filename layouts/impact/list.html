@@ -13,7 +13,9 @@
   <div class="news-list">
     {{ $paginator := .Paginate .Data.Pages }}
     {{ range $paginator.Pages }}
-      {{ partial "li_compact" . }}
+      <div class="stream-item">
+        {{ partial "li_impact" . }}
+      </div>
     {{ end }}
   </div>
 
