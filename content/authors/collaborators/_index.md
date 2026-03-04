@@ -1,21 +1,39 @@
 ---
-title: Collaborations
-cms_exclude: true
+# Display name
+title: Collaborators
 
-view: 2
+# Full Name (for SEO)
+first_name: Collaborators
+last_name: ''
 
-header:
-  caption: ''
-  image: ''
+# Is this the primary user of the site?
+superuser: false
+
+# Role/position
+role: Academic Partners
+
+# Organizations/Affiliations
+organizations:
+  - name: Adobe Media and Data Science Research
+    url: ''
+
+# Short bio (displayed in user profile at end of posts)
+bio: ''
+
+# Social/Academic Networking
+social: []
+
+# Highlight the author in author lists? (true/false)
+highlight_name: false
+
+# Organizational groups that you belong to (for People widget)
+user_groups:
+  - Collaborators
 ---
 
-<div style="font-size: 0.85em; font-family: adobe-clean, sans-serif;">
 We work closely with leading faculty and students from universities across the globe. Our support for this global academic network includes opportunities such as gift funding for faculty conducting research aligned with Adobe's areas of interest, PhD fellowships, student internships, and faculty sabbaticals at our research centers. Some of our academic collaborators include:
-</div>
 
-<br>
-
-<div style="font-size: 0.9em; font-family: adobe-clean, sans-serif; display: flex; justify-content: space-between;">
+<div style="font-size: 0.9em; font-family: adobe-clean, sans-serif; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
   <div>
     <a href="https://www.iiitd.ac.in/">Indraprastha Institute of Information Technology Delhi</a><br>
     <a href="https://home.iitd.ac.in/">Indian Institute of Technology Delhi</a><br>

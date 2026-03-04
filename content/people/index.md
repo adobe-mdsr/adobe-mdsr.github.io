@@ -13,6 +13,7 @@ sections:
       user_groups:
           - Researchers
           - Careers
+          - Collaborators
       sort_by: Title
       sort_ascending: true
     design:
