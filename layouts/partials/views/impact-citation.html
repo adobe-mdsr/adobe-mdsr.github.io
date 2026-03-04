@@ -17,43 +17,43 @@
   {{ $summary = $item.Content | plainify | truncate 150 }}
 {{ end }}
 
-<div class="pub-list-item view-citation" style="display: flex; margin-bottom: 2rem; gap: 2rem;">
+<div class="pub-list-item view-citation">
   {{/* Thumbnail - same prominence as publications */}}
-  <div style="flex: 0 0 200px;">
+  <div>
     {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
     {{ with $resource }}
       {{ $thumb := .Fill "400x300" }}
       <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
-        <img src="{{ $thumb.RelPermalink }}" alt="{{ $item.Title }}" width="200" height="150" loading="lazy" style="width: 100%; height: auto; border-radius: 4px;">
+        <img src="{{ $thumb.RelPermalink }}" alt="{{ $item.Title }}" width="200" height="150" loading="lazy">
       </a>
     {{ else }}
       {{/* Fallback: YouTube or featured_image param */}}
       {{ with $item.Params.youtube_id }}
         <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
-          <img src="https://img.youtube.com/vi/{{ . }}/maxresdefault.jpg" alt="{{ $item.Title }}" width="200" height="150" loading="lazy" style="width: 100%; height: auto; border-radius: 4px; object-fit: cover;" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/{{ . }}/0.jpg';">
+          <img src="https://img.youtube.com/vi/{{ . }}/maxresdefault.jpg" alt="{{ $item.Title }}" width="200" height="150" loading="lazy" style="object-fit: cover;" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/{{ . }}/0.jpg';">
         </a>
       {{ end }}
       {{ if and (not $item.Params.youtube_id) $item.Params.featured_image }}
         <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
-          <img src="{{ $item.Params.featured_image }}" alt="{{ $item.Title }}" width="200" height="150" loading="lazy" style="width: 100%; height: auto; border-radius: 4px; object-fit: cover;">
+          <img src="{{ $item.Params.featured_image }}" alt="{{ $item.Title }}" width="200" height="150" loading="lazy" style="object-fit: cover;">
         </a>
       {{ end }}
     {{ end }}
   </div>
 
   {{/* Citation */}}
-  <div style="flex: 1;">
+  <div>
     <h3 class="article-title mb-1 mt-0">
       <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="underline">{{ $item.Title }}</a>
     </h3>
-    {{ if $item.Params.authors }}
-    <span class="article-metadata li-cite-author">
-      {{ partial "page_metadata_authors_custom" $item -}}
-    </span>{{ if not $item.Date.IsZero }}, {{ end }}
-    {{ end }}
-    {{- if not $item.Date.IsZero -}}
-      {{- $item.Date.Format "January 2, 2006" -}}.
-    {{- end -}}
+    <span class="cite-meta">
+      {{ if $item.Params.authors }}
+      <span class="li-cite-author">{{ partial "page_metadata_authors_custom" $item -}}</span>{{ if not $item.Date.IsZero }}, {{ end }}
+      {{ end }}
+      {{- if not $item.Date.IsZero -}}
+        {{- $item.Date.Format "January 2, 2006" -}}.
+      {{- end -}}
+    </span>
 
     {{ with $summary }}
     <div class="article-style mt-1">
