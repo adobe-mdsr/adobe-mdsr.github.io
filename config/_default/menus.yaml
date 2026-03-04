@@ -10,14 +10,14 @@ main:
   - name: Impact
     url: impact
     weight: 20
-  - name: Publications
-    url: publication
+  - name: Research
+    url: research
     weight: 30
   - name: People
     url: people
     weight: 40
-  - name: Join us!
-    url: '/people/open-positions/'
+  - name: Careers
+    url: '/people/careers/'
     weight: 50
 #  - name: Posts
 #    url: post

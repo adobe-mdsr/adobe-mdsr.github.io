@@ -15,8 +15,6 @@ sections:
         <br>
         The MDSR Lab is a group of researchers committed to solving hard problems in the broad area of digital media and marketing. The group develops cutting-edge machine learning approaches for important use cases including content understanding and generation, behavior modeling, and human-computer interaction.
         
-        <br> <br> <br>
-        
   # - block: markdown
   #   content:
   #     title:
@@ -51,16 +49,16 @@ sections:
 
   - block: collection
     content:
-      title: Publications
+      title: Research
       text: ""
       count: 5
       filters:
         folders:
-          - publication
+          - research
         publication_type: 'conference'
       archive:
         enable: true
-        link: publication/
+        link: research/
     design:
       view: citation-custom
       columns: '1'

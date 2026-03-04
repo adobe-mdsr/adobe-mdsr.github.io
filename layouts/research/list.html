@@ -10,7 +10,7 @@
       {{ end }}
 
       {{/* Group publications by year */}}
-      {{ $pages := where site.RegularPages "Type" "publication" }}
+      {{ $pages := where site.RegularPages "Type" "research" }}
       {{ $pages_by_year := slice }}
       {{ range $pages.GroupByDate "2006" "desc" }}
         {{ $year := .Key }}

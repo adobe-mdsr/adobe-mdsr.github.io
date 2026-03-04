@@ -52,8 +52,9 @@
       {{ with .Params.url_project }}
         <a class="btn btn-outline-primary btn-page-header" href="{{ . }}" target="_blank" rel="noopener">Project</a>
       {{ end }}
-      <a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename="{{ .RelPermalink }}cite.bib">Cite
-      </a>
+      {{ with .Resources.GetMatch "cite.bib" }}
+      <a href="#" class="btn btn-outline-primary btn-page-header js-cite-modal" data-filename="{{ .RelPermalink }}">Cite</a>
+      {{ end }}
     </div>
     {{ end }}
   </div>

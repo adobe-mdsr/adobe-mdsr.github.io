@@ -1,5 +1,5 @@
 ---
-title: Publications
+title: Research
 
 # Listing view
 # Available views: List (1), Compact (2), Card (3), Citation (4), Showcase (5), Masonry

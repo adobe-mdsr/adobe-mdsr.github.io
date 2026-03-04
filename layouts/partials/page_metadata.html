@@ -10,7 +10,7 @@
 
   {{/* If `authors` is set, display author list */}}
   {{- if $page.Params.authors -}}
-  <span>{{ partial "page_metadata_authors_custom" $page }},&nbsp;</span>
+  <span class="{{ if eq $page.Type "impact" }}li-cite-author {{ end }}">{{ partial "page_metadata_authors_custom" $page }},&nbsp;</span>
   {{- end -}}
 
   {{/* If `categories` is set, display category */}}
@@ -54,7 +54,7 @@
   {{ if not (in (slice "talk" "page") $page.Type) }}
   <span class="article-date">
     {{ $date := $page.Lastmod.Format $dateFormat }}
-    {{ if eq $page.Type "publication" }}
+    {{ if eq $page.Type "research" }}
       {{ $date = $page.Date.Format ($site.Params.publications.date_format | default "January, 2006") }}
     {{ else }}
       {{ if not $page.Lastmod.IsZero }}
@@ -74,12 +74,12 @@
   {{ end}}
 
   {{/* If `reading_time` is set, display reading time */}}
-  {{ if and ($site.Params.features.publications.show_reading_time | default false) (eq $page.Type "publication") }}
+  {{ if and ($site.Params.features.publications.show_reading_time | default false) (eq $page.Type "research") }}
   <span class="middot-divider"></span>
   <span class="article-reading-time">
     {{ $page.ReadingTime }} {{ i18n "minute_read" | default "min read" }}
   </span>
-  {{ else if and ($site.Params.features.blog.show_reading_time | default false) (eq $page.Type "post") }}
+  {{ else if and ($site.Params.features.blog.show_reading_time | default false) (eq $page.Type "impact") }}
   <span class="middot-divider"></span>
   <span class="article-reading-time">
     {{ $page.ReadingTime }} {{ i18n "minute_read" | default "min read" }}
@@ -87,7 +87,7 @@
   {{ end }}
 
   {{/* Show Dimensions citation count if enabled. */}}
-  {{ if and ($site.Params.features.publications.show_dimensions_badge | default false) (eq $page.Type "publication") }}
+  {{ if and ($site.Params.features.publications.show_dimensions_badge | default false) (eq $page.Type "research") }}
   <span class="middot-divider"></span>
   <span class="dimensions-badge">
     <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
@@ -96,7 +96,7 @@
   {{ end }}
 
   {{/* Show Altmetric badge if enabled. */}}
-  {{ if and ($site.Params.features.publications.show_altmetric_badge | default false) (eq $page.Type "publication") }}
+  {{ if and ($site.Params.features.publications.show_altmetric_badge | default false) (eq $page.Type "research") }}
   <span class="middot-divider"></span>
   <span class="altmetric-badge">
     <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js' async></script>
