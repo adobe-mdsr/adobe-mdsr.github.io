@@ -23,6 +23,12 @@
   }
 }
 
+// Minimal gap between Careers and Collaborators
+.people-widget .careers-collaborators-row > [class*="col-"] {
+  padding-left: 0.25rem !important;
+  padding-right: 0.25rem !important;
+}
+
 // Custom styles for navbar title on mobile
 @media screen and (max-width: 768px) {
   .navbar-brand {
