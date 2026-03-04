@@ -15,3 +15,11 @@
 # Redirect old /post/ URLs to /impact/ for backward compatibility
 /post/*      /impact/:splat   301
 
+# Redirect old /publication/ URLs to /research/ for backward compatibility
+/publication/     /research/    301
+/publication/*    /research/:splat   301
+
+# Redirect old Join Us / open-positions URLs to Careers
+/people/open-positions/    /people/careers/    301
+/people/openpositions/    /people/careers/    301
+

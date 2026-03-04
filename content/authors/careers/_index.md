@@ -1,10 +1,10 @@
 ---
 # Display name
-title: Open Positions
+title: Careers
 
 # Full Name (for SEO)
-first_name: Open
-last_name: Positions
+first_name: Careers
+last_name: ''
 
 # Is this the primary user of the site?
 superuser: false
@@ -37,7 +37,7 @@ highlight_name: false
 
 # Organizational groups that you belong to (for People widget)
 user_groups:
-  - Open Positions
+  - Careers
 ---
 
 # Research Scientists, Associates, and Interns
