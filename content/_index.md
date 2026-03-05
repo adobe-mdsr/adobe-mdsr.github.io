@@ -15,10 +15,6 @@ sections:
         <br>
         The MDSR Lab is a group of researchers committed to solving hard problems in the broad area of digital media and marketing. The group develops cutting-edge machine learning approaches for important use cases including content understanding and generation, behavior modeling, and human-computer interaction.
         
-        <br> <br> <br>
-        
-        **We're hiring for research scientists and research associates!** Our team is looking to recruit predoctoral and postdoctoral researchers with backgrounds in natural language processing, computer vision, behavioral sciences, and machine learning. [Apply here](mailto:applytomdsr@adobe.com) to join our team.
-        
   # - block: markdown
   #   content:
   #     title:
@@ -41,25 +37,28 @@ sections:
 
   - block: collection
     content:
-      title: Latest News
+      title: Impact
       text: ""
       count: 5
       filters:
         folders:
-          - post
+          - impact
     design:
-      view: compact
+      view: impact-citation
       columns: '1'
 
   - block: collection
     content:
-      title: Publications
+      title: Research
       text: ""
       count: 5
       filters:
         folders:
-          - publication
+          - research
         publication_type: 'conference'
+      archive:
+        enable: true
+        link: research/
     design:
       view: citation-custom
       columns: '1'

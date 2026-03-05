@@ -1,0 +1,184 @@
+{{- define "main" -}}
+
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      {{ with .Content }}
+      <div class="article-style">{{ . }}</div>
+      {{ end }}
+
+      {{/* Group publications by year */}}
+      {{ $pages := where site.RegularPages "Type" "research" }}
+      {{ $pages_by_year := slice }}
+      {{ range $pages.GroupByDate "2006" "desc" }}
+        {{ $year := .Key }}
+        
+        {{/* CORE-style venue tiers (A*, A, B, C); workshops/findings are always last */}}
+        {{ $core_a_star_keywords := slice
+          "conference on neural information processing systems" "neurips" "nips"
+          "international conference on learning representations" "iclr"
+          "international conference on machine learning" "icml"
+          "conference on computer vision and pattern recognition" "cvpr"
+          "aaai conference on artificial intelligence" "aaai"
+          "association for the advancement of artificial intelligence"
+          "annual meeting of the association for computational linguistics" "acl"
+          "international joint conference on artificial intelligence" "ijcai"
+          "international conference on computer vision" "iccv"
+          "empirical methods in natural language processing" "emnlp"
+          "european conference on computer vision" "eccv"
+          "acm multimedia" "acmmm"
+          "acm sigkdd conference on knowledge discovery and data mining" "kdd"
+          "international acm sigir conference on research and development in information retrieval" "sigir"
+          "the web conference" "www"
+          "acm chi conference on human factors in computing systems" "chi"
+          "journal of machine learning research" "jmlr"
+          "transactions of the association for computational linguistics" "tacl"
+          "ieee transactions on pattern analysis and machine intelligence" "tpami" "pami"
+          "international journal of computer vision" "ijcv"
+        }}
+        {{ $core_a_keywords := slice
+          "north american chapter of the association for computational linguistics" "naacl"
+          "international conference on computational linguistics" "coling"
+          "acm international conference on information and knowledge management" "cikm"
+          "international conference on data mining" "icdm"
+          "interspeech"
+          "international conference on autonomous agents and multiagent systems" "aamas"
+          "british machine vision conference" "bmvc"
+          "winter conference on applications of computer vision" "wacv"
+        }}
+        {{ $core_b_keywords := slice
+          "european conference on information retrieval" "ecir"
+          "international conference on pattern recognition" "icpr"
+          "ieee international conference on acoustics speech and signal processing" "icassp"
+          "eacl"
+        }}
+        {{ $core_c_keywords := slice
+          "pmlr"
+          "dialogue discourse"
+        }}
+
+        {{ $ranked_venues := slice }}
+        {{ $bottom_venues := slice }}
+        
+        {{ range .Pages }}
+          {{ $pub := "" }}
+          {{ $pub_short := "" }}
+          {{ $pub_norm := "" }}
+          {{ $pub_short_norm := "" }}
+          {{ $venue_key := "" }}
+          {{ $core_rank_label := "Unranked" }}
+          {{ $core_rank_score := 4 }}
+          {{ $core_priority := 9999 }}
+          {{ $is_bottom := false }}
+
+          {{ if .Params.publication }}
+            {{ $pub = .Params.publication | lower }}
+          {{ end }}
+          {{ if .Params.publication_short }}
+            {{ $pub_short = .Params.publication_short | lower }}
+          {{ end }}
+          {{ if .Params.publication_short }}
+            {{ $venue_key = .Params.publication_short | lower }}
+          {{ else if .Params.publication }}
+            {{ $venue_key = .Params.publication | lower }}
+          {{ else }}
+            {{ $venue_key = "zzzz" }}
+          {{ end }}
+          {{ $pub_norm = printf " %s " (replaceRE "[^a-z0-9]+" " " $pub) }}
+          {{ $pub_short_norm = printf " %s " (replaceRE "[^a-z0-9]+" " " $pub_short) }}
+
+          {{/* Push workshop/findings tracks to bottom regardless of venue tier */}}
+          {{ if or (in $pub "workshop") (in $pub_short "workshop") (in $pub "findings") (in $pub_short "findings") (in $pub "cvprw") (in $pub_short "cvprw") }}
+            {{ $is_bottom = true }}
+          {{ end }}
+
+          {{/* Explicitly lower-tier entries stay at the bottom */}}
+          {{ if eq (.Params.venue_tier | default "") "lower" }}
+            {{ $is_bottom = true }}
+          {{ end }}
+
+          {{ range $idx, $kw := $core_a_star_keywords }}
+            {{ $needle := printf " %s " (replaceRE "[^a-z0-9]+" " " ($kw | lower)) }}
+            {{ if or (in $pub_norm $needle) (in $pub_short_norm $needle) }}
+              {{ $core_rank_label = "A*" }}
+              {{ $core_rank_score = 0 }}
+              {{ if eq $core_priority 9999 }}
+                {{ $core_priority = $idx }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if eq $core_rank_score 4 }}
+            {{ range $idx, $kw := $core_a_keywords }}
+              {{ $needle := printf " %s " (replaceRE "[^a-z0-9]+" " " ($kw | lower)) }}
+              {{ if or (in $pub_norm $needle) (in $pub_short_norm $needle) }}
+                {{ $core_rank_label = "A" }}
+                {{ $core_rank_score = 1 }}
+                {{ if eq $core_priority 9999 }}
+                  {{ $core_priority = $idx }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if eq $core_rank_score 4 }}
+            {{ range $idx, $kw := $core_b_keywords }}
+              {{ $needle := printf " %s " (replaceRE "[^a-z0-9]+" " " ($kw | lower)) }}
+              {{ if or (in $pub_norm $needle) (in $pub_short_norm $needle) }}
+                {{ $core_rank_label = "B" }}
+                {{ $core_rank_score = 2 }}
+                {{ if eq $core_priority 9999 }}
+                  {{ $core_priority = $idx }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if eq $core_rank_score 4 }}
+            {{ range $idx, $kw := $core_c_keywords }}
+              {{ $needle := printf " %s " (replaceRE "[^a-z0-9]+" " " ($kw | lower)) }}
+              {{ if or (in $pub_norm $needle) (in $pub_short_norm $needle) }}
+                {{ $core_rank_label = "C" }}
+                {{ $core_rank_score = 3 }}
+                {{ if eq $core_priority 9999 }}
+                  {{ $core_priority = $idx }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          {{ if $is_bottom }}
+            {{ $bottom_venues = $bottom_venues | append (dict "page" . "venue" $venue_key "title" (.Title | lower)) }}
+          {{ else }}
+            {{ $sort_key := printf "%02d-%04d-%s-%s" $core_rank_score $core_priority $venue_key (.Title | lower) }}
+            {{ $ranked_venues = $ranked_venues | append (dict "page" . "core_rank_label" $core_rank_label "core_rank_score" $core_rank_score "core_priority" $core_priority "venue" $venue_key "title" (.Title | lower) "sort_key" $sort_key) }}
+          {{ end }}
+        {{ end }}
+        
+        {{/* Display year heading */}}
+        <h2 class="year">{{ $year }}</h2>
+        
+        {{/* Display non-workshop publications by CORE tier */}}
+        {{ $ranked_sorted := sort $ranked_venues "sort_key" "asc" }}
+        {{ range $ranked_sorted }}
+          {{ $item := .page }}
+          <div class="stream-item">
+            {{ partial "views/citation-custom" (dict "item" $item) }}
+          </div>
+        {{ end }}
+        
+        {{/* Display workshops/findings/lower-tier venues at the end */}}
+        {{ $bottom_sorted := sort (sort $bottom_venues "title" "asc") "venue" "asc" }}
+        {{ range $bottom_sorted }}
+          {{ $item := .page }}
+          <div class="stream-item">
+            {{ partial "views/citation-custom" (dict "item" $item) }}
+          </div>
+        {{ end }}
+        
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+{{- end -}}
+

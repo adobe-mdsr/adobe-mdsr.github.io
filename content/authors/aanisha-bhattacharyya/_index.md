@@ -14,7 +14,7 @@ authors:
 superuser: false
 
 # Role/position
-role: Research Associate
+role: Research Scientist
 
 # Organizations/Affiliations
 organizations:
@@ -25,10 +25,12 @@ organizations:
 bio:
 
 interests:
-  - Deep Learning
-  - Natural Language Processing
   - Behaviorial Science
   - Multimodal Learning
+  - Computational Social Science
+  - Pluralistic Alignment
+  - Deep Learning
+  - Natural Language Processing
 
 education:
   courses:
@@ -77,6 +79,6 @@ user_groups:
   - Researchers
 ---
 
-I am Aanisha Bhattacharyya, a research associate at Adobe's Media and Data Science Research Lab and a PhD student in the Computer Science Department at the University at Buffalo and IIIT Delhi, advised by Prof. Changyou Chen and Dr. Rajiv Ratn Shah respectively. My research delves into the intersection of behavioral science and foundation models, with a focus on advancing content intelligence through the integration of behavioral insights. I contributed to the development of Large Content and Behavior Models (LCBMs), which expand the capabilities of multimodal models by enabling behavior simulation, content-behavior optimization, and domain adaptation.
+I am Aanisha Bhattacharyya, a research scientist at Adobe's Media and Data Science Research Lab and a PhD student in the Computer Science Department at the University at Buffalo and IIIT Delhi, advised by Prof. Changyou Chen and Dr. Rajiv Ratn Shah respectively. My research delves into the intersection of behavioral science and foundation models, with a focus on advancing content intelligence through the integration of behavioral insights. 
 
-My interests also include exploring social simulation to better understand and forecast societal trends, aligning models with human behavior and preferences. Currently, I am focusing on enhancing multimodal large language models (LLMs) to address diverse real-world applications, from content personalization and recommendation to understanding human interaction with media. 
+I work at the boundary of human behavior and machine intelligence, studying how people respond to content and how AI can anticipate those patterns. My research spans behavioral prediction, multimodal modeling, alignment, and behavioral interpretability. I’m drawn to work that asks honest questions, builds useful systems, and makes complex human and model behavior a little more understandable.

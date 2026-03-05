@@ -1,9 +1,8 @@
 {{/* Display author list. */}}
-
-{{ $taxonomy := "authors" }}
-{{ with .Param "authors" }}
-  {{ $link_authors := site.Params.link_authors | default true }}
-  {{ range $index, $value := . }}
+{{- $taxonomy := "authors" -}}
+{{- with .Param "authors" -}}
+  {{- $link_authors := site.Params.link_authors | default true -}}
+  {{- range $index, $value := . -}}
     {{- $profile_page := site.GetPage (printf "/%s/%s" $taxonomy (. | urlize)) -}}
     {{- $is_people_author := false -}}
     {{- if $profile_page -}}
@@ -11,14 +10,11 @@
         {{- $is_people_author = true -}}
       {{- end -}}
     {{- end -}}
-
-    {{- if gt $index 0 }}, {{ end -}}
-    
-    {{/* Only make MDSR authors (those in the Researchers group) clickable */}}
+    {{- if gt $index 0 }},&nbsp;{{ end -}}
     {{- if and $profile_page $is_people_author -}}
       <a href="{{$profile_page.RelPermalink}}">{{$profile_page.Title}}</a>
     {{- else -}}
       {{- . -}}
     {{- end -}}
-  {{ end }},
-{{ end }} 
+  {{- end -}}
+{{- end -}}

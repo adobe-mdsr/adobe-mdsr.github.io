@@ -26,9 +26,10 @@ bio:
 
 interests:
   - Natural Language Processing
-  - Graph Representation Learning
   - Computer Vision
-  - Deep Learning
+  - Computational Social Science
+  - Cognitive Science
+  - Graph Learning
 
 education:
   courses:
@@ -41,9 +42,9 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
-  # - icon: globe
-  #   icon_pack: fas
-  #   link: 
+  - icon: globe
+    icon_pack: fas
+    link: https://varunkhurana07.github.io/
   - icon: envelope
     icon_pack: fas
     link: 'mailto:varunkhurana@adobe.com'
@@ -55,7 +56,7 @@ social:
     link: https://scholar.google.com/citations?user=pJXPThwAAAAJ&hl
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/in/kvarun07/
+    link: https://www.linkedin.com/in/varunkhurana07/
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -72,9 +73,14 @@ user_groups:
   - Researchers
 ---
 
-I am Varun, a research associate at Adobe's Media and Data Science Research lab. My research pursuits encompass Natural Language Processing, Computer Vision, Graph Learning and Cognitive AI. I have worked on harnessing the power of human behavior to enhance content intelligence. I successfully applied this pioneering concept by leveraging the cognitive signals contained in artificially generated human gaze patterns to improve both image and natural language understanding tasks. 
+I am Varun, a Research Associate at Adobe's Media and Data Science Research lab, where I develop machine learning models that understand and shape human responses to content. My work bridges computer vision, natural language processing and behavioral science.
 
-My current focus is on developing diverse capabilities in multimodal LLMs to empower a gamut of applications. 
+My research focuses on three interconnected areas:
+- <u>Predict</u>: Synthesizing gaze patterns over text to model reading behavior and predicting audience engagement with promotional images on social media
+- <u>Optimize</u>: Steering generative models toward behavioral objectives such as viewer engagement and brand-specific visual styles
+- <u>Explain</u>: Extracting interpretable, actionable insights from complex behavioral data
 
-I hold a B.Tech (with Honors) degree in Computer Science & Engineering and a Minor in Economics from IIIT-Delhi.
+I am particularly interested in building models that capture the dynamic nature of human preferences, evolve with experience and remain controllable for practitioners. To know more about my research background and vision, please visit my [website](https://varunkhurana07.github.io/research/).
+
+I am always happy to discuss research ideas at the intersection of machine learning and behavioral science. Please [reach out](mailto:varunkhurana@adobe.com) to connect.
 

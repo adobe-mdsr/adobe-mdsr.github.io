@@ -12,7 +12,8 @@ sections:
       #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
       user_groups:
           - Researchers
-          - Open Positions
+          - Careers
+          - Collaborators
       sort_by: Title
       sort_ascending: true
     design:

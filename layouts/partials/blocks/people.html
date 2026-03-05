@@ -27,47 +27,96 @@
   {{ end }}
 
   {{ range $block.content.user_groups }}
-    {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
-    
-    {{/* Apply sorting */}}
-    {{ if $sort_ascending }}
-      {{ $query = sort $query $sort_by }}
-    {{ else }}
-      {{ $query = sort $query $sort_by "desc" }}
-    {{ end }}
-
-    {{if $query | and (gt (len $block.content.user_groups) 1) }}
-      <div class="col-md-12">
-        <h2 class="mb-4">{{ . | markdownify }}</h2>
-      </div>
-    {{end}}
-
-    {{ range $query }}
-      {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
-      <div class="col-12 col-sm-auto people-person">
-
-        {{/* Avatar. */}}
-        {{ if $avatar }}
-          {{ $avatar_image := $avatar.Fill "270x270 Center" }}
-          <img class="avatar avatar-circle" src="{{ $avatar_image.RelPermalink }}" alt="{{.Title}}">
-        {{ else }}
-          <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/{{ md5 .Params.email }}?s=270" alt="{{.Title}}">
-        {{ end }}
-
-        <div class="portrait-title">
-          {{/* Name. */}}
-          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-
-          {{/* Role. */}}
-          {{ if $show_role }}{{ with .Params.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}{{ end }}
-
-          {{/* Social Links. */}}
-          {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
-
-          {{/* Interests. */}}
-          {{ if and $show_interests .Params.interests }}<p class="people-interests">{{ delimit .Params.interests ", " | markdownify | emojify }}</p>{{ end }}
+    {{ $group := . }}
+    {{ if eq $group "Collaborators" }}
+      {{/* Skip - rendered together with Careers below */}}
+    {{ else if eq $group "Careers" }}
+      {{/* Render Careers and Collaborators side by side in one row */}}
+      {{ $careers := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice "Careers") }}
+      {{ $collaborators := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice "Collaborators") }}
+      {{ $careers = sort $careers $sort_by }}
+      {{ $collaborators = sort $collaborators $sort_by }}
+      {{ if not $sort_ascending }}
+        {{ $careers = sort $careers $sort_by "desc" }}
+        {{ $collaborators = sort $collaborators $sort_by "desc" }}
+      {{ end }}
+      {{if or $careers $collaborators }}
+      <div class="col-12">
+        <div class="row g-0 careers-collaborators-row">
+          <div class="col-12 col-md-6">
+            {{ if gt (len $block.content.user_groups) 1 }}<h2 class="mb-4">{{ "Careers" | markdownify }}</h2>{{ end }}
+          {{ range $careers }}
+            <div class="people-person">
+              {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+              {{ if $avatar }}
+                {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+                <img class="avatar avatar-circle" src="{{ $avatar_image.RelPermalink }}" alt="{{.Title}}" width="270" height="270" loading="lazy">
+              {{ else }}
+                <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/{{ md5 .Params.email }}?s=270" alt="{{.Title}}" width="270" height="270" loading="lazy">
+              {{ end }}
+              <div class="portrait-title">
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                {{ if $show_role }}{{ with .Params.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}{{ end }}
+                {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
+                {{ if and $show_interests .Params.interests }}<p class="people-interests">{{ delimit .Params.interests ", " | markdownify | emojify }}</p>{{ end }}
+              </div>
+            </div>
+          {{ end }}
+          </div>
+          <div class="col-12 col-md-6">
+            {{ if gt (len $block.content.user_groups) 1 }}<h2 class="mb-4">{{ "Collaborators" | markdownify }}</h2>{{ end }}
+          {{ range $collaborators }}
+            <div class="people-person">
+              {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+              {{ if $avatar }}
+                {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+                <img class="avatar avatar-circle" src="{{ $avatar_image.RelPermalink }}" alt="{{.Title}}" width="270" height="270" loading="lazy">
+              {{ else }}
+                <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/{{ md5 .Params.email }}?s=270" alt="{{.Title}}" width="270" height="270" loading="lazy">
+              {{ end }}
+              <div class="portrait-title">
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                {{ if $show_role }}{{ with .Params.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}{{ end }}
+                {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
+                {{ if and $show_interests .Params.interests }}<p class="people-interests">{{ delimit .Params.interests ", " | markdownify | emojify }}</p>{{ end }}
+              </div>
+            </div>
+          {{ end }}
+          </div>
         </div>
       </div>
+      {{ end }}
+    {{ else }}
+      {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
+      {{ if $sort_ascending }}
+        {{ $query = sort $query $sort_by }}
+      {{ else }}
+        {{ $query = sort $query $sort_by "desc" }}
+      {{ end }}
+
+      {{if $query | and (gt (len $block.content.user_groups) 1) }}
+        <div class="col-md-12">
+          <h2 class="mb-4">{{ $group | markdownify }}</h2>
+        </div>
+      {{end}}
+
+      {{ range $query }}
+        {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+        <div class="col-12 col-sm-auto people-person">
+          {{ if $avatar }}
+            {{ $avatar_image := $avatar.Fill "270x270 Center" }}
+            <img class="avatar avatar-circle" src="{{ $avatar_image.RelPermalink }}" alt="{{.Title}}" width="270" height="270" loading="lazy">
+          {{ else }}
+            <img class="avatar avatar-circle" src="https://s.gravatar.com/avatar/{{ md5 .Params.email }}?s=270" alt="{{.Title}}" width="270" height="270" loading="lazy">
+          {{ end }}
+          <div class="portrait-title">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ if $show_role }}{{ with .Params.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}{{ end }}
+            {{ if $show_social }}{{ partial "social_links" . }}{{ end }}
+            {{ if and $show_interests .Params.interests }}<p class="people-interests">{{ delimit .Params.interests ", " | markdownify | emojify }}</p>{{ end }}
+          </div>
+        </div>
+      {{ end }}
     {{ end }}
   {{ end }}
 
