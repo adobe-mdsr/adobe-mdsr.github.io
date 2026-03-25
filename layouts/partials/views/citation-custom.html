@@ -1,30 +1,37 @@
 {{ $item := .item }}
 {{ $has_attachments := partial "functions/has_attachments" $item }}
 
-<div class="pub-list-item view-citation" style="display: flex; margin-bottom: 2rem; gap: 2rem;">
+<div class="pub-list-item view-citation">
   {{/* Thumbnail */}}
-  <div style="flex: 0 0 200px;">
+  <div>
     {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
     {{ with $resource }}
-      <img src="{{ .RelPermalink }}" alt="{{ $item.Title }}" style="width: 100%; height: auto; border-radius: 4px;">
+      {{ $thumb := .Fill "400x300" }}
+      <img src="{{ $thumb.RelPermalink }}" alt="{{ $item.Title }}" width="200" height="150" loading="lazy">
     {{ end }}
   </div>
 
   {{/* Citation */}}
-  <div style="flex: 1;">
-    <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-    {{/* New Format: paper name, authors, venue, year */}}
-    <a href="{{ $item.RelPermalink }}" class="underline">{{ $item.Title }}</a>,
-    <span class="article-metadata li-cite-author">
-      {{ partial "page_metadata_authors_custom" $item }}
+  <div>
+    {{/* Keep publication title typography consistent with compact list items. */}}
+    <h3 class="article-title mb-1 mt-0">
+      <a href="{{ $item.RelPermalink }}" class="underline">{{ $item.Title }}</a>
+    </h3>
+    <span class="cite-meta">
+      <span class="li-cite-author">{{ partial "page_metadata_authors_custom" $item -}}</span>.
+      {{ if $item.Params.publication_short }}
+        {{- $pub_short := $item.Params.publication_short | lower -}}
+        {{- $item.Params.publication_short | markdownify -}}
+        {{- if $item.Params.publication }}
+          {{- $pub := $item.Params.publication | lower -}}
+          {{- if and (in $pub "findings") (not (in $pub_short "findings")) }} (Findings){{ end -}}
+          {{- if and (in $pub "workshop") (not (in $pub_short "workshop")) }} (Workshop){{ end -}}
+        {{- end -}},
+      {{ else if $item.Params.publication }}
+        {{- $item.Params.publication | markdownify -}},
+      {{ end }}
+      {{- $item.Date.Format "2006" -}}.
     </span>
-    {{if $item.Params.publication_short }}
-      {{- $item.Params.publication_short | markdownify -}},
-    {{ else if $item.Params.publication }}
-      {{- $item.Params.publication | markdownify -}},
-    {{ end }}
-    {{- $item.Date.Format "2006" -}}.
 
     {{ if $has_attachments }}
     <div class="btn-links mt-2">

@@ -1,3 +1,69 @@
+/* Reduce excessive spacing between About (hero) and Impact on homepage */
+.home-section:first-of-type {
+  padding-bottom: 2.5rem;
+}
+.home-section:nth-of-type(2) {
+  padding-top: 2.5rem;
+}
+
+/* Shared citation layout for research and impact (homepage + /research/ + /impact/) */
+.pub-list-item.view-citation {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 2rem;
+  font-size: 0.95rem;
+
+  /* Thumbnail column */
+  > div:first-child {
+    flex: 0 0 200px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+  }
+
+  /* Content column */
+  > div:last-child {
+    flex: 1;
+  }
+
+  /* Title: more prominent than authors */
+  .article-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .article-title a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .article-title a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  /* Authors, venue, date: consistent secondary style */
+  .cite-meta {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #6c757d;
+
+    a {
+      color: #007bff;
+      font-weight: 400;
+
+      &:hover {
+        color: #0056b3;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
 /* Common styles for article metadata */
 .article-metadata {
   margin-bottom: 1rem;
@@ -8,8 +74,8 @@
   }
   
   .article-date {
-    color: #6c757d;
-    font-weight: 500;
+    color: #868e96;
+    font-weight: 400;
   }
   
   .middot-divider {
@@ -69,8 +135,8 @@
     }
     
     .article-date {
-      color: #6c757d;
-      font-weight: 500;
+      color: #868e96;
+      font-weight: 400;
       display: inline-flex;
       align-items: center;
     }
@@ -122,7 +188,7 @@
     
     .stream-meta.article-metadata {
       .article-date {
-        font-size: 0.95rem;
+        font-weight: 400;
       }
     }
   }

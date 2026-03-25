@@ -1,0 +1,63 @@
+{{- define "main" -}}
+
+<div class="pub">
+
+  {{ partial "page_header.html" . }}
+
+  <div class="article-container pt-3">
+    <h1>{{ .Title }}</h1>
+    
+    <div class="article-metadata d-flex flex-wrap align-items-center">
+      {{/* Display authors if they exist */}}
+      {{ if .Params.authors }}
+      <div class="d-inline-flex">
+        {{ $authorLen := len .Params.authors }}
+        {{ range $k, $v := .Params.authors }}
+          {{ $authorPage := site.GetPage (printf "/authors/%s" (urlize $v)) }}
+          {{ $is_people_author := false }}
+          {{ if $authorPage }}
+            {{ if in $authorPage.Params.user_groups "Researchers" }}
+              {{ $is_people_author = true }}
+            {{ end }}
+          {{ end }}
+          {{ if and $authorPage $is_people_author }}
+            <span><a href="{{ $authorPage.RelPermalink }}">{{ $v }}</a></span>{{ if lt $k (sub $authorLen 1) }},&nbsp;{{ end }}
+          {{ else }}
+            <span>{{ $v }}</span>{{ if lt $k (sub $authorLen 1) }},&nbsp;{{ end }}
+          {{ end }}
+        {{ end }}
+        {{ if .Date }},&nbsp;{{ end }}
+      </div>
+      {{end}}
+
+      {{/* Show date */}}
+      {{ if .Date }}
+      <span class="article-date d-inline-flex align-items-center">
+        {{ .Date.Format "January 2, 2006" }}
+      </span>
+      {{ end }}
+    </div>
+
+    {{ with (.Resources.ByType "image").GetMatch "*featured*" }}
+    <div class="article-header article-container featured-image-wrapper mt-4 mb-4">
+      <div style="position:relative">
+        <img src="{{ .RelPermalink }}" 
+             width="{{ .Width }}" 
+             height="{{ .Height }}" 
+             alt="{{ $.Title }}" 
+             class="featured-image" 
+             style="max-width:100%;height:auto;">
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
+  <div class="article-container">
+    <div class="article-style">
+      {{ .Content }}
+    </div>
+    {{ partial "page_footer" . }}
+  </div>
+</div>
+
+{{- end -}} 

@@ -23,10 +23,10 @@ This is the website for the Adobe Media and Data Science Research (MDSR) Laborat
 6. Commit the changes to the repository by raising a PR on the main branch of the base repository from your forked repository.
 
 
-#### Adding your publications
+#### Adding your research
 
-1. Add your publication to the `content/publication/` directory by creating a new folder with some short name for your publication.
-2. Add 'index.md' file to your folder and add the publication details in it. See the example in `content/publication/long-term-memorability/index.md`. Make sure to update the `date` and `publishDate` fields to the correct date of the publication. Don't change the name of the file.
+1. Add your publication to the `content/research/` directory by creating a new folder with some short name for your publication.
+2. Add 'index.md' file to your folder and add the publication details in it. See the example in `content/research/long-term-memorability/index.md`. Make sure to update the `date` and `publishDate` fields to the correct date of the publication. Don't change the name of the file.
 3. Add 'featured.jpg' or 'featured.png' to your folder and add the publication picture to it.
 4. Compile the website and verify the changes by running `hugo server -D` and commit the changes to the repository by raising a PR on the main branch of the base repository from your forked repository.
 

@@ -1,0 +1,10 @@
+{{/* Load citation modal and publication JS for research pages (site uses "research" type, not "publication") */}}
+{{ $hasResearch := where site.Pages "Type" "research" }}
+{{ if $hasResearch }}
+  {{ partial "citation" . }}
+  {{ $js := resources.Get "js/wowchemy-publication.js" | js.Build (dict "format" "esm" "minify" true) }}
+  {{- if hugo.IsProduction -}}
+    {{- $js = $js | fingerprint "md5" -}}
+  {{- end -}}
+  <script src="{{ $js.RelPermalink }}" type="module"></script>
+{{- end -}}
