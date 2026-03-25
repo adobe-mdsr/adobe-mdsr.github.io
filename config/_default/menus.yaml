@@ -13,9 +13,6 @@ main:
   - name: Publications
     url: publication
     weight: 30
-  - name: People
-    url: people
-    weight: 40
   - name: Join us!
     url: '/people/open-positions/'
     weight: 50
