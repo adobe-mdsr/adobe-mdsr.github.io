@@ -47,19 +47,14 @@ sections:
       view: impact-citation
       columns: '1'
 
-  - block: collection
+  - block: research-recent
     content:
       title: Research
       text: ""
       count: 5
-      filters:
-        folders:
-          - research
-        publication_type: 'conference'
       archive:
         enable: true
         link: research/
     design:
-      view: citation-custom
       columns: '1'
 ---
