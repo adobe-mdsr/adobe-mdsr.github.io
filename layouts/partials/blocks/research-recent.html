@@ -1,0 +1,154 @@
+{{/* Custom block: shows recent research papers sorted by year then CORE venue rank,
+     matching the order used by layouts/research/list.html */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{ $items_count := $block.content.count | default 5 }}
+{{ if eq $items_count 0 }}{{ $items_count = 65535 }}{{ end }}
+
+{{ $core_a_star_keywords := slice
+  "conference on neural information processing systems" "neurips" "nips"
+  "international conference on learning representations" "iclr"
+  "international conference on machine learning" "icml"
+  "conference on computer vision and pattern recognition" "cvpr"
+  "aaai conference on artificial intelligence" "aaai"
+  "association for the advancement of artificial intelligence"
+  "annual meeting of the association for computational linguistics" "acl"
+  "international joint conference on artificial intelligence" "ijcai"
+  "international conference on computer vision" "iccv"
+  "empirical methods in natural language processing" "emnlp"
+  "european conference on computer vision" "eccv"
+  "acm multimedia" "acmmm"
+  "acm sigkdd conference on knowledge discovery and data mining" "kdd"
+  "international acm sigir conference on research and development in information retrieval" "sigir"
+  "the web conference" "www"
+  "acm chi conference on human factors in computing systems" "chi"
+  "journal of machine learning research" "jmlr"
+  "transactions of the association for computational linguistics" "tacl"
+  "ieee transactions on pattern analysis and machine intelligence" "tpami" "pami"
+  "international journal of computer vision" "ijcv"
+}}
+{{ $core_a_keywords := slice
+  "north american chapter of the association for computational linguistics" "naacl"
+  "international conference on computational linguistics" "coling"
+  "acm international conference on information and knowledge management" "cikm"
+  "international conference on data mining" "icdm"
+  "interspeech"
+  "international conference on autonomous agents and multiagent systems" "aamas"
+  "british machine vision conference" "bmvc"
+  "winter conference on applications of computer vision" "wacv"
+}}
+{{ $core_b_keywords := slice
+  "european conference on information retrieval" "ecir"
+  "international conference on pattern recognition" "icpr"
+  "ieee international conference on acoustics speech and signal processing" "icassp"
+  "eacl"
+}}
+{{ $core_c_keywords := slice
+  "pmlr"
+  "dialogue discourse"
+}}
+
+{{/* Build a flat list sorted by year desc then CORE rank asc */}}
+{{ $all_sorted := slice }}
+
+{{ range (where site.RegularPages "Type" "research").GroupByDate "2006" "desc" }}
+  {{ $ranked := slice }}
+  {{ $bottom := slice }}
+
+  {{ range .Pages }}
+    {{ $pub := "" }}
+    {{ $pub_short := "" }}
+    {{ $venue_key := "" }}
+    {{ $core_rank_score := 4 }}
+    {{ $core_priority := 9999 }}
+    {{ $is_bottom := false }}
+
+    {{ if .Params.publication }}{{ $pub = .Params.publication | lower }}{{ end }}
+    {{ if .Params.publication_short }}{{ $pub_short = .Params.publication_short | lower }}{{ end }}
+    {{ if .Params.publication_short }}
+      {{ $venue_key = .Params.publication_short | lower }}
+    {{ else if .Params.publication }}
+      {{ $venue_key = .Params.publication | lower }}
+    {{ else }}
+      {{ $venue_key = "zzzz" }}
+    {{ end }}
+
+    {{ $pub_norm := printf " %s " (replaceRE "[^a-z0-9]+" " " $pub) }}
+    {{ $pub_short_norm := printf " %s " (replaceRE "[^a-z0-9]+" " " $pub_short) }}
+
+    {{ if or (in $pub "workshop") (in $pub_short "workshop") (in $pub "findings") (in $pub_short "findings") (in $pub "cvprw") (in $pub_short "cvprw") }}
+      {{ $is_bottom = true }}
+    {{ end }}
+    {{ if eq (.Params.venue_tier | default "") "lower" }}{{ $is_bottom = true }}{{ end }}
+
+    {{ range $idx, $kw := $core_a_star_keywords }}
+      {{ $needle := printf " %s " (replaceRE "[^a-z0-9]+" " " ($kw | lower)) }}
+      {{ if or (in $pub_norm $needle) (in $pub_short_norm $needle) }}
+        {{ if eq $core_rank_score 4 }}{{ $core_rank_score = 0 }}{{ end }}
+        {{ if eq $core_priority 9999 }}{{ $core_priority = $idx }}{{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if eq $core_rank_score 4 }}
+      {{ range $idx, $kw := $core_a_keywords }}
+        {{ $needle := printf " %s " (replaceRE "[^a-z0-9]+" " " ($kw | lower)) }}
+        {{ if or (in $pub_norm $needle) (in $pub_short_norm $needle) }}
+          {{ if eq $core_rank_score 4 }}{{ $core_rank_score = 1 }}{{ end }}
+          {{ if eq $core_priority 9999 }}{{ $core_priority = $idx }}{{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if eq $core_rank_score 4 }}
+      {{ range $idx, $kw := $core_b_keywords }}
+        {{ $needle := printf " %s " (replaceRE "[^a-z0-9]+" " " ($kw | lower)) }}
+        {{ if or (in $pub_norm $needle) (in $pub_short_norm $needle) }}
+          {{ if eq $core_rank_score 4 }}{{ $core_rank_score = 2 }}{{ end }}
+          {{ if eq $core_priority 9999 }}{{ $core_priority = $idx }}{{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if eq $core_rank_score 4 }}
+      {{ range $idx, $kw := $core_c_keywords }}
+        {{ $needle := printf " %s " (replaceRE "[^a-z0-9]+" " " ($kw | lower)) }}
+        {{ if or (in $pub_norm $needle) (in $pub_short_norm $needle) }}
+          {{ if eq $core_rank_score 4 }}{{ $core_rank_score = 3 }}{{ end }}
+          {{ if eq $core_priority 9999 }}{{ $core_priority = $idx }}{{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ $sort_key := printf "%02d-%04d-%s-%s" $core_rank_score $core_priority $venue_key (.Title | lower) }}
+    {{ if $is_bottom }}
+      {{ $bottom = $bottom | append (dict "page" . "venue" $venue_key "title" (.Title | lower)) }}
+    {{ else }}
+      {{ $ranked = $ranked | append (dict "page" . "sort_key" $sort_key) }}
+    {{ end }}
+  {{ end }}
+
+  {{ range (sort $ranked "sort_key" "asc") }}
+    {{ $all_sorted = $all_sorted | append .page }}
+  {{ end }}
+  {{ range (sort (sort $bottom "title" "asc") "venue" "asc") }}
+    {{ $all_sorted = $all_sorted | append .page }}
+  {{ end }}
+{{ end }}
+
+{{ $columns := $block.design.columns | default "2" }}
+
+<div class="col-12 {{if eq $columns "2"}}col-lg-8{{end}}">
+  {{ with $block.content.text }}{{ . | emojify | $page.RenderString }}{{ end }}
+
+  {{ range first $items_count $all_sorted }}
+    <div class="stream-item">
+      {{ partial "views/citation-custom" (dict "item" .) }}
+    </div>
+  {{ end }}
+
+  {{ if $block.content.archive.enable }}
+    {{ $archive_link := $block.content.archive.link | default "/research/" | relLangURL }}
+    {{ $archive_text := $block.content.archive.text | default "See all" }}
+    <div class="see-all">
+      <a href="{{ $archive_link }}">{{ $archive_text }} <i class="fas fa-angle-right"></i></a>
+    </div>
+  {{ end }}
+</div>
