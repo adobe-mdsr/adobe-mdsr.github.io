@@ -59,23 +59,34 @@
     {{ end }}
   </div>
 
-  {{ $files := readDir (printf "content/%s" .File.Dir) }}
-  {{ $featuredImage := "" }}
-  {{ range $files }}
-    {{ if or (eq .Name "featured.jpg") (eq .Name "featured.png") }}
-      {{ $featuredImage = .Name }}
-    {{ end }}
-  {{ end }}
-  {{ if $featuredImage }}
-  <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width:720px;max-height:439px">
+  {{ $featuredRes := .Resources.GetMatch "featured.*" }}
+  {{ if $featuredRes }}
+  {{ if ne $featuredRes.MediaType.SubType "gif" }}
+    {{ $img_sm := $featuredRes.Fit "400x280 webp" }}
+    {{ $img_md := $featuredRes.Fit "720x500 webp" }}
+    {{ $img_lg := $featuredRes.Fit "1200x834 webp" }}
+  <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width:{{ $img_md.Width }}px;max-height:{{ $img_md.Height }}px">
     <div style="position:relative">
-      <img src="{{ printf "%s%s" .RelPermalink $featuredImage }}" 
-           width="720" 
-           height="439" 
-           alt="{{ .Title }}" 
+      <img srcset="{{ $img_sm.RelPermalink }} 400w, {{ $img_md.RelPermalink }} 720w, {{ $img_lg.RelPermalink }} 1200w"
+           sizes="(max-width: 480px) 400px, (max-width: 960px) 720px, 1200px"
+           src="{{ $img_md.RelPermalink }}"
+           width="{{ $img_md.Width }}"
+           height="{{ $img_md.Height }}"
+           alt="{{ .Title }}"
+           loading="lazy"
            class="featured-image">
     </div>
   </div>
+  {{ else }}
+  <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width:720px;max-height:500px">
+    <div style="position:relative">
+      <img src="{{ $featuredRes.RelPermalink }}"
+           alt="{{ .Title }}"
+           loading="lazy"
+           class="featured-image">
+    </div>
+  </div>
+  {{ end }}
   {{ end }}
 
   <div class="article-container">

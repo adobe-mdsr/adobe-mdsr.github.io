@@ -35,6 +35,7 @@
 </div>
 
 {{ $image := $featured.Fill (printf "680x500 q90 %s" $anchor) }}
+{{ $image_sm := $featured.Fill (printf "340x250 q90 %s" $anchor) }}
 <div class="container-fluid split-header d-none d-xl-block">
   <div class="row">
     <div class="col-6">
@@ -54,7 +55,9 @@
     </div>
     <div class="col-6">
       <div class="split-header-image">
-        <img src="{{ $image.RelPermalink }}" itemprop="image" alt="" width="680" height="500" loading="lazy">
+        <img srcset="{{ $image_sm.RelPermalink }} 340w, {{ $image.RelPermalink }} 680w"
+             sizes="(max-width: 600px) 340px, 680px"
+             src="{{ $image.RelPermalink }}" itemprop="image" alt="" width="680" height="500" loading="lazy">
         {{ with $.Params.image.caption }}<span class="article-header-caption">{{ . | markdownify | emojify }}</span>{{ end }}
       </div>
     </div>
