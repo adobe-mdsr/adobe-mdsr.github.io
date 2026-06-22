@@ -160,8 +160,7 @@
     {{/* PostProcess must be last action in the pipeline */}}
     {{- $style = $style | resources.PostProcess -}}
   {{- end -}}
-  <link rel="preload" href="{{ $style.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ $style.RelPermalink }}"></noscript>
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
   {{/* Load WC community block styles */}}
   {{ $wc_block_styles := resources.Match "scss/blocks/**.scss" }}
@@ -177,8 +176,7 @@
       {{/* PostProcess must be last action in the pipeline */}}
       {{- $wc_block_styles = $wc_block_styles | resources.PostProcess -}}
     {{- end -}}
-    <link rel="preload" href="{{ $wc_block_styles.RelPermalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{{ $wc_block_styles.RelPermalink }}"></noscript>
+    <link rel="stylesheet" href="{{ $wc_block_styles.RelPermalink }}" />
   {{ end }}
 
   {{/* Hugo Chroma Syntax Highlighter Initialization */}}
