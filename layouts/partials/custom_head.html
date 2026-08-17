@@ -1,3 +1,14 @@
+{{/* Adobe logo beside the site name in the navbar. */}}
+<style>
+  .navbar-brand{display:inline-flex;align-items:center;gap:.55rem;}
+  .navbar-brand::before{
+    content:"";display:inline-block;flex:0 0 auto;
+    width:1.5em;height:1.5em;
+    background:url('/uploads/adobe-logo.png') no-repeat center;
+    background-size:contain;
+  }
+</style>
+
 {{/* BreadcrumbList structured data for all non-home pages. */}}
 {{ if not .IsHome }}
 <script type="application/ld+json">

@@ -31,7 +31,7 @@ user_groups:
   - Collaborators
 ---
 
-We work closely with leading faculty and students from universities across the globe. Our support for this global academic network includes opportunities such as gift funding for faculty conducting research aligned with Adobe's areas of interest, PhD fellowships, student internships, and faculty sabbaticals at our research centers. Some of our academic collaborators include:
+We work closely with leading faculty and students from universities across the globe. Our support for this global academic network includes opportunities such as gift funding for faculty conducting research aligned with Adobe's areas of interest, [PhD fellowships](/people/phd-fellows/), student internships, and faculty sabbaticals at our research centers. Some of our academic collaborators include:
 
 <div style="font-size: 0.9em; font-family: adobe-clean, sans-serif; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
   <div>

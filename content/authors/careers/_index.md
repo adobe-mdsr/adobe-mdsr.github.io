@@ -53,3 +53,7 @@ We are looking to recruit research scientists, research associates, and interns 
 
 Email your CV to [applytomdsr@adobe.com](mailto:applytomdsr@adobe.com).
 
+## PhD Fellowships
+
+We also support outstanding doctoral students at our partner universities through PhD fellowships. Meet our [Adobe PhD Fellows](/people/phd-fellows/).
+
